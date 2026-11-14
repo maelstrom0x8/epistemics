@@ -1,0 +1,34 @@
+# Guardian Angels: LLM Personalization for Productivity and Security
+
+**Author:** Gwern Branwen (gwern.net). The author is not named explicitly in the page's visible front matter, but first-person references to "my corpus" and self-citations to earlier Gwern essays identify the author as Gwern Branwen.
+**Source:** gwern.net (personal research essay/blog), created 2025-12-01, last modified 2026-06-05
+**URL:** https://gwern.net/guardian-angel
+**Accessed:** 2026-11-14
+**Type:** Primary source (essay/commentary by a single author; not peer-reviewed research)
+
+## Summary
+
+The essay argues that general-purpose chatbots fail knowledge workers because post-training pushes models toward a bland, averaged "assistant" persona that ignores individual users, reasons shallowly on unverifiable tasks, and forgets corrections. Gwern proposes a "Guardian Angel" (GA): a personalized LLM that functions as a digital twin of a single user, continuously fine-tuned on that user's own data and corrections, so it amplifies the user's judgment rather than replacing it. The piece sketches the technical mechanisms (dynamic evaluation, continual learning, active preference elicitation), a set of design principles (enhancement over replacement, "mental sovereignty," resistance to engagement-optimization), and a concrete prototype plan built from the author's own writing and IRC logs.
+
+## Key Claims / Findings
+
+- Diagnoses five failure modes of current chatbots: mode collapse toward a generic persona, "laziness" on tasks without verifiable reward signals, context-window brittleness that retrieval-augmented generation only partly fixes, excessive compliance that enables prompt-injection and confused-deputy attacks, and amnesia, since in-context corrections do not update frozen weights.
+- Frames commercial incentives as working against personalization: Gwern writes that "tool AIs want to be agent AIs," meaning vendors are pushed to make models that act autonomously and displace the user rather than stay subordinate to them.
+- Defines a Guardian Angel's "identity" pragmatically as the user's personality, values, and preferences, held closely enough that the GA can be trusted roughly as much as the user trusts themselves.
+- Proposes the GA weakly addresses the principal-agent problem by making agent and principal as similar as possible, so the user's remaining job is deciding what is worth doing (a "board"/CEO role) while the GA handles execution.
+- Lists core technical mechanisms: dynamic evaluation (online fine-tuning during use, an older RNN technique the author argues still works for Transformers), continual learning via replay to limit catastrophic forgetting, synthetic paraphrase/Q&A data to aid generalization, and active learning in which the GA asks the user targeted questions (likened to DAgger-style low-regret learning) rather than requiring general value alignment.
+- States a design principle of "mental sovereignty": the GA should not use any persuasion or manipulation technique the principal has not knowingly sanctioned.
+- Lists explicit "anti-principles" the project should resist: optimizing for low latency, minimal cost, immediate profitability, engagement metrics, demo appeal, public benchmark scores, or "brand-safe" sanitized outputs. Gwern states that "a good GA demos badly," since it is tuned to one person rather than to impress onlookers.
+- Favors a CLI-first, append-only, log-based interaction model (compared to Emacs) with periodic background "daydreaming" passes intended to surface new connections in the user's accumulated material.
+- Discusses hosting and security trade-offs: local/on-device models offer some legal privacy benefits, but Gwern argues most users will not self-host and instead favors dedicated, tamper-resistant cloud servers with hardware roots of trust and end-to-end encryption; he quotes Moxie Marlinspike's observation that "people don't want to run their own servers, and never will."
+- Sketches a business model: selling to power users at roughly $1,000/month, combined with open-source releases and a dual-class share structure to preserve founder control.
+- Describes a planned concrete prototype, the "Gwern Branwen Transformer" (GBT), a sub-100-billion-parameter model fine-tuned on the author's own essays, notes, IRC logs, and social media exports, with a stated goal of a 100x gain in his own writing productivity (one to three publishable essays per day requiring minimal revision), and a test criterion of generating a publishable essay from a single prompt sentence.
+- Flags that the approach could extend to delegated political participation and organizational "board" simulations, and to human oversight roles in military contexts, though these are presented as extensions rather than developed in depth.
+
+## Access notes / limitations
+
+Retrieved via the WebFetch tool, which converts the live page to text/Markdown and passes it through an intermediate summarization model rather than returning raw HTML directly to this process. The summary above reflects that tool's extraction, including the quoted fragments, which were not independently cross-checked character-for-character against the original page source. No fetch failure, paywall, or 404 occurred; the page returned substantive content, including stated metadata (status "finished," confidence "possible," importance rated 10, created 2025-12-01, modified 2026-06-05). The sprint page's attribution of the essay to 2026 is consistent with the modified date but the creation date is late 2025; both are given above rather than collapsing to a single year. Authorship is inferred from first-person and self-citation evidence rather than an explicit byline, and this inference should be verified against the live page if precise attribution matters downstream. Given the scope limits of this task, the full essay (which appears long, with extensive technical and citation detail) was not read in its entirety independently of the fetch tool's summarization; claims above should be treated as a faithful but tool-mediated paraphrase, not a verbatim transcription.
+
+## Relevance to the sprint
+
+This essay is directly relevant to Track 3 (Epistemic Products) because it proposes a concrete architecture and set of design principles for a personal AI advisor built around amplifying a specific user's own judgment rather than substituting a generic or vendor-optimized persona for it. Its "anti-principles" (resisting engagement metrics, demo appeal, and brand-safety sanitization) and its "mental sovereignty" principle are useful reference points for designing epistemic tools that aim to support a user's reasoning rather than subtly steer it. The active-learning/preference-elicitation mechanism it describes, where the system asks calibrated questions instead of silently assuming alignment, is a pattern worth comparing against other personalization approaches considered in this track.

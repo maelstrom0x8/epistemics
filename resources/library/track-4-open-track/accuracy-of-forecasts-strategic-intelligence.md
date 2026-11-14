@@ -1,0 +1,34 @@
+# Accuracy of Forecasts in Strategic Intelligence
+
+**Authors:** David R. Mandel (Defence Research and Development Canada, Toronto) and Alan Barnes (formerly, Intelligence Assessment Secretariat, Privy Council Office, Ottawa)
+**Source:** *Proceedings of the National Academy of Sciences of the USA* (PNAS), 2014, vol. 111, no. 30, pp. 10984-10989. DOI: 10.1073/pnas.1406138111. PMCID: PMC4121776. PMID: 25024176.
+**URL:** https://www.pnas.org/doi/10.1073/pnas.1406138111 (full text also at https://pmc.ncbi.nlm.nih.gov/articles/PMC4121776/)
+**Accessed:** 2026-11-14
+**Type:** Peer-reviewed (PNAS, original research article)
+
+## Summary
+
+Mandel and Barnes analyze 1,514 probabilistic forecasts drawn from roughly six years (March 2005-December 2011) of real strategic intelligence production by 15 analysts in a Canadian government intelligence unit covering the Middle East and Africa. Using standard forecast-evaluation measures (discrimination via ROC area under the curve, calibration indices, and Brier score), they find the forecasts discriminated events that occurred from those that did not with high accuracy and were reasonably well calibrated, with the main departure from perfect calibration being underconfidence rather than overconfidence. Senior analysts discriminated outcomes better than junior analysts, and forecasts of harder and more policy-important questions showed greater underconfidence. The authors argue this is the first study to apply standard forecasting-accuracy metrics directly to real-world strategic intelligence assessments rather than to expert surveys or simulated judgments.
+
+## Key Claims / Findings
+
+- **Data source:** Forecasts made by 15 analysts in the Middle East and Africa Division of Canada's Intelligence Assessment Secretariat (a real strategic intelligence unit, not a survey or forecasting tournament), spanning March 2005 to December 2011.
+- **Sample construction:** Of 3,881 total judgments extracted from intelligence reports, 2,315 were unconditional forecasts; of those, 1,943 carried numeric probabilities (0/10 to 10/10 scale, used internally but not published in finished reports). After excluding forecasts with ambiguous outcomes, team-authored forecasts, and cases missing moderator-variable coding, 1,514 forecasts remained for the main analysis.
+- **Outcome scoring:** Two subject-matter experts unaffiliated with the forecasts coded whether events occurred, with 90% agreement on an overlapping 50-forecast check sample. About 20% of numeric forecasts had outcomes judged ambiguous; these were handled via sensitivity analyses rather than simply dropped without acknowledgment.
+- **Headline discrimination result:** ROC area under the curve = 0.940 (SE = 0.007), described by the authors as very good discrimination between events that occurred and those that did not.
+- **Headline calibration/accuracy results:** Brier score = 0.074; forecasts accounted for 76% of outcome variance (η² = 0.758); calibration index = 0.016, with calibration-in-the-large close to zero.
+- **Direction of miscalibration:** The signed calibration index (CCI = -0.076) indicated systematic underconfidence rather than overconfidence - the reverse of the pattern often reported for expert political forecasters.
+- **Moderator effects:** Senior analysts discriminated better than junior analysts (AUC 0.951 vs. 0.909, P = 0.025). Easier forecasts were discriminated better than harder ones (AUC 0.966 vs. 0.913, P < 0.001). Underconfidence was more pronounced for harder forecasts and for forecasts of higher policy importance; experience and forecast time horizon had no significant effect on calibration.
+- **Comparison to prior literature:** The authors contrast their results with Philip Tetlock's earlier work on expert political forecasters, noting their forecasts explained substantially more outcome variance (76% vs. roughly 20% in Tetlock's data) and were, if anything, underconfident rather than overconfident.
+- **Recalibration exercise:** A power transformation (exponent a = 2.2) applied to the raw probabilities substantially reduced miscalibration in a held-out sense-check; a simplified version mapped onto the original 0-10 scale points reduced mean absolute deviation from perfect calibration from 12.7% to 4.6% (a 63.8% relative reduction).
+- **Authors' interpretation:** They attribute underconfidence to a professional norm favoring informativeness balanced against overstatement, combined with intense personal accountability analysts face from skeptical policy audiences; they describe underconfidence as the "lesser of two evils" relative to overconfidence and as more readily correctable after the fact.
+- **Authors' own caveat on generalizability:** They explicitly warn that the recalibration approach should not be applied to other organizations' forecasts without first studying that organization's own track record, writing that "care ought to be taken not to overfit or overgeneralize the approach."
+- **Structural limitation noted in the paper:** The forecasts examined are organizational products shaped by analysts, managers, and peer review, not the output of a single identifiable individual's judgment process, which complicates comparison to individual-forecaster studies (e.g., Tetlock's).
+
+## Relevance to the sprint
+
+This paper is a rare case of standard forecast-accuracy metrics (ROC/AUC, Brier score, calibration indices) applied to real, consequential strategic-intelligence judgments rather than to forecasting-tournament data, laboratory tasks, or post hoc expert surveys, making it directly useful as a methodological template for anyone in the sprint who wants to evaluate real-world forecasting or decision quality against ground-truth outcomes. It is also a useful counterpoint to the "experts are typically overconfident" narrative associated with Tetlock's earlier work, since it documents underconfidence in a professional setting and offers a candidate institutional explanation (accountability pressure) worth testing against other domains, including AI-generated forecasts.
+
+## Access notes / limitations
+
+Full text was successfully retrieved via the PubMed Central mirror (PMC4121776), which is the author-deposited open-access copy of this PNAS article. The canonical PNAS URL (https://www.pnas.org/doi/10.1073/pnas.1406138111) returned an HTTP 403 Forbidden error when fetched directly, so the publisher's own page could not be read for this entry; all content above is drawn from the PMC full-text copy, which matches the citation, DOI, and PMID of the PNAS version. No fabricated figures or quotations were added beyond what the PMC full text provided. One inference in the Key Claims section above (regarding the structural, organizational nature of the forecasts complicating individual-level comparison) is drawn from the paper's own stated limitation and is not an added speculation beyond the text.

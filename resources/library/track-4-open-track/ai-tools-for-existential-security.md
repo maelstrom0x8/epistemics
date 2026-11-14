@@ -1,0 +1,35 @@
+# AI Tools for Existential Security
+
+**Authors:** Lizka Vaintrob and Owen Cotton-Barratt
+**Source:** Forethought (Forethought Research), 14 March 2025
+**URL:** https://www.forethought.org/research/ai-tools-for-existential-security
+**Accessed:** 2026-11-14
+**Type:** Expert analysis (research organization publication; not peer-reviewed)
+
+## Summary
+
+The article argues that rapid AI progress, while a major driver of existential risk, could also be directed toward reducing that risk if specific categories of AI applications are deliberately accelerated. The authors group the most valuable applications into three clusters: epistemic tools (forecasting, collective truth-tracking, AI-assisted philosophy), coordination-enabling tools (automated negotiation, treaty verification, structured transparency), and risk-targeted tools (automated safety research, information security, pandemic monitoring). They contend that acceleration of these specific applications is feasible on a timescale of weeks to years, can often be pursued unilaterally, and should become a much larger share of existential-risk-focused work.
+
+## Key Claims / Findings
+
+- Fast AI progress is a primary source of existential risk, but the same progress "could also help us manage those risks" if channeled well.
+- Three clusters of especially valuable AI applications are proposed, corresponding to identifying challenges, coordinating responses, and implementing them:
+  - **Epistemic applications:** AI forecasting tools (particularly for novel technologies and their strategic implications); AI for collective epistemics (fact-checking, rating the truthfulness of other systems, to prevent failures caused by misplaced trust); AI for philosophy (supporting moral reflection, avoiding subtle catastrophic moral errors, keeping advanced systems well grounded).
+  - **Coordination-enabling applications:** automated negotiation (addressing bandwidth limits and confidential information); treaty verification and enforcement (including monitoring that avoids leaking sensitive data); structured transparency tools (e.g., monitoring for dangerous weapons development without the harms of ordinary surveillance). The authors flag a counterweight risk here: such tools could also let small groups seize power or create dangerous commitment races or premature "lock-in."
+  - **Risk-targeted applications:** automated AI safety research (alignment theory, interpretability, AI control) so that safety work keeps pace with capabilities; information security to limit model proliferation and self-exfiltration; AI-enabled pandemic monitoring, including pathogen-synthesis screening and early biosurveillance.
+  - Other applications (e.g., boosting food production to reduce war risk) can help indirectly, but the authors expect top-priority work to fall within the three main clusters.
+- The authors argue acceleration of these specific applications is practically achievable: market forces will eventually build similar tools, but gaps and slow uptake leave room to speed development by weeks, months, or plausibly years, and timing differences matter disproportionately during a period of rapid capability growth because they can change the order in which risk-reducing and risk-generating capabilities arrive.
+- Unlike slowing dangerous capabilities (which typically requires broad consensus), accelerating beneficial applications can often be pursued unilaterally by individuals or small groups.
+- Proposed acceleration strategies include: curating specialized datasets and defining benchmarks (since "metrics drive development"); scaffolding and post-training to improve current models' task performance even if superseded later; influencing compute allocation by persuading AI labs, governments, and other actors; and addressing non-AI barriers such as interfaces, institutional readiness, trust-building, and complementary technologies (e.g., privacy-preserving systems).
+- The authors estimate that roughly 30% of existential-risk researchers should focus on this area now, rising to "more than half" over time, though they do not describe this figure as based on a formal model.
+- Three recommendations for existential-risk-focused people and organizations: (1) shift current work toward accelerating the identified applications; (2) plan for a future with abundant cheap cognitive labor, where some currently labor-intensive strategies become viable and some current work becomes obsolete; (3) prepare to assist with automation by building relevant expertise, tool experience, institutional positioning, and buy-in.
+- The piece frames this focus as high-leverage because it lets many people direct large amounts of cognitive labor in parallel, is comparatively under-explored, and does not require competing for a small number of political or regulatory levers.
+- The authors note (via appendices referenced in the piece, not fully explored in this summary) that they address counterarguments: whether acceleration work could itself speed up AI progress in harmful ways, what limits an individual's counterfactual impact, and how the argument relates to existing concepts such as differential technological development and "def/acc."
+
+## Relevance to the sprint
+
+This piece is directly relevant to Track 4 because it is explicitly about deployment: it treats "which AI capabilities get built and adopted first, and how quickly" as a lever for existential safety, rather than treating AI capability growth as a given backdrop. Its epistemic-applications cluster (forecasting tools, collective truth-tracking systems, AI-assisted philosophical reasoning) maps closely onto the hackathon's "AI x Epistemics" theme, giving a concrete, deployment-oriented framing of why and how such tools should be built and accelerated rather than merely studied. For a reference library, it is a useful primary statement of the "accelerate the helpful applications" strategic position, which teams can either build on or critique.
+
+## Access notes / limitations
+
+Full text was retrieved via a web fetch tool that converts the page to text and summarizes it against a detailed extraction prompt (title, authors, date, all sections, key claims, examples). The page loaded successfully and no paywall or access error was encountered. However, this entry is based on a tool-mediated extraction rather than direct line-by-line reading of the original HTML/PDF by a human researcher, so the summary above should be understood as a close paraphrase of the fetched content rather than a verbatim transcript. The appendices (on harms of acceleration, counterfactual-impact limits, and links to differential technological development/def-acc) are referenced in the source but were not extracted in full detail here; a reader needing those arguments in depth should consult the original article directly. No numerical claims beyond the "~30% now, more than half later" researcher-allocation estimate were reported in the extracted content, and that estimate's underlying methodology (if any) was not specified in what was retrieved.

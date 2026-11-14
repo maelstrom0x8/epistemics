@@ -1,0 +1,31 @@
+# Design Sketches: Collective Epistemics
+
+**Authors:** Owen Cotton-Barratt, Lizka Vaintrob, Oly Sourbut
+**Source:** Forethought (Forethought Research), 25 December 2025 — Part 1 of 4 in the series "Design sketches for a more sensible world"
+**URL:** https://www.forethought.org/research/design-sketches-collective-epistemics
+**Accessed:** 2026-11-14
+**Type:** Institutional / expert analysis
+
+## Summary
+
+The piece argues that near-term AI could power new tools for how people share information, evaluate claims, and decide what to trust, and that deploying such tools well could help shift society toward a "high-honesty equilibrium" in which honesty is widely expected and rewarded. The authors present five concrete "design sketches" for such tools — extending community-note-style annotation, AI rhetoric highlighting, public reliability tracking of claims, benchmark evals for model epistemic virtues, and claim-provenance infrastructure — describing for each how it would work, what it could achieve, its feasibility, and possible starting projects. The authors explicitly frame this as a first installment focused on upside; they state that corresponding risks are deferred to a later article in the series.
+
+## Key Claims / Findings
+
+- **Framing:** each sketch is evaluated on how it would work, what it could achieve, feasibility, and possible first projects to build.
+- **Community notes for everything:** extending the X Community Notes model (inline context cards shown only on broad reader consensus) across the internet, using AI classifiers for predicted helpfulness, AI-drafted notes with linked reports, and browser integration. The authors estimate AI-written notes could cost roughly $0.01–$0.10 per tweet, and argue the binding constraints are social (adoption, trust) rather than technical.
+- **Rhetoric highlighting:** an AI layer flagging manipulative or misleading rhetorical moves (fallacies, loaded language, selective quotation, misrepresented citations), offered as gentle inline highlights plus a "write mode" linter for authors. They estimate annotating an hour of reading could cost "at least $1 and possibly much more," suggesting the approach should initially target high-stakes text (e.g., a cite-checker, annotated news).
+- **Reliability tracking:** a browser widget rating public figures/institutions by the track record of their past factual claims, predictions, and promises (kept separate rather than merged into one score), intended to reward accuracy over confident or attention-grabbing claims. Noted design challenges: vague claims, establishing ground truth in contested domains, and gameability — with proposed mitigations (counter-metrics, transparent methodology) — plus non-technical obstacles like adoption and legal exposure.
+- **Epistemic virtue evals:** an open benchmark suite testing models for calibration, clarity, thoroughness, non-bias, non-sycophancy, and precision, using methods such as "flip tests" for sycophancy/loyalty, proper scoring rules for calibration, and a "pedantic mode" penalizing statements a careful reader could find misleading. The authors recommend mixing evaluation methods to reduce Goodharting, and argue such evals could shape both developer incentives and user model choice.
+- **Provenance tracing:** infrastructure tracing a claim back through citations, data, and assumptions, combining epistemic decomposition into atomic claims, automated provenance tracking, trust-propagation algorithms that detect circular citation, public repositories, and UI/API layers. The authors note this could create pressure toward more auditable AI if unsourced AI outputs are treated as weaker evidence, but concede the full system is complex, most valuable at scale, and hard to bootstrap — so they recommend building useful sub-components first.
+- **Adoption tension:** the tools are described as most valuable at scale, yet most users will not seek them out unprompted; the authors propose embedding them in existing platforms (social media, browsers, content sites) or building expert-facing/API products that benefit end users indirectly.
+- **Stakes argument:** the authors contend the larger payoff is changing the informational landscape itself (making dishonesty reputationally costly across the board), not merely helping individual users navigate existing information — arguing a "high-honesty" equilibrium would make it harder for actors to concentrate power through manipulation and easier to detect and correct serious risks.
+- **Self-stated caveats:** the sketches are explicitly speculative, upside-focused, with risks deferred to a later article; adoption and trust (rather than technical feasibility) are repeatedly flagged as the central uncertainty; cost estimates are described by the authors as rough back-of-envelope figures; the authors disclose using AI assistance in preparing the piece.
+
+## Relevance to the sprint
+
+Directly relevant to Track 1: the "epistemic virtue evals" sketch proposes concrete methodology (flip tests for sycophancy, proper scoring rules for calibration, a "pedantic mode" for misleading-but-technically-true statements) that maps onto evaluating whether a model's stated confidence and claims are reliable. The "reliability tracking" and "provenance tracing" sketches are also relevant as design patterns for decision-making evals, since both aim to score claims/actors by verifiable track record rather than by surface confidence, which is the same problem evaluators face when scoring model outputs for calibration versus persuasiveness.
+
+## Access notes / limitations
+
+Fetched via the WebFetch tool, which retrieves and summarizes page content through an intermediate model rather than returning raw HTML; this file reflects that tool's extraction rather than a direct read of the original markup. The fetch returned a title, author byline, publication date, venue description, and a detailed structured account of the five sketches and surrounding argument, consistent with a full-text fetch rather than a paywall or partial block. No independent verification was performed against a second source or an archived snapshot of the page; the publication date (25 December 2025) and other specifics are as reported by the fetch and have not been independently cross-checked.
