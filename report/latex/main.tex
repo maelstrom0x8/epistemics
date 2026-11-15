@@ -1,6 +1,6 @@
-\documentclass[10pt,twocolumn]{article}
+\documentclass[11pt]{article}
 
-\usepackage[margin=0.75in,columnsep=0.25in]{geometry}
+\usepackage[margin=1in]{geometry}
 \usepackage{times}
 \usepackage[T1]{fontenc}
 \usepackage[numbers,sort&compress]{natbib}
@@ -13,45 +13,53 @@
 \titlespacing*{\section}{0pt}{1.2em}{0.6em}
 \titlespacing*{\subsection}{0pt}{0.9em}{0.4em}
 
-\title{\vspace{-1.5em}\textbf{Receipts Against Answer Substitution}\\[0.2em]
-\large Investigating Whether Claim-Level Evidence Verification Improves\\
-Reliability in Multi-Agent AI Handoffs}
-\author{O. Eze\\ \small Independent researcher}
-\date{}
-
 \begin{document}
-\twocolumn[
-  \begin{@twocolumnfalse}
-    \maketitle
-    \begin{abstract}
-      \noindent
-      AI agents increasingly pass claims to one another with citations, retrieved
-      documents, and intermediate conclusions attached. Prior work shows that these
-      citations frequently fail to support the claims attached to them, and
-      separately, that a receiving agent will sometimes adopt an upstream agent's
-      conclusion even when it has independent access to evidence that would let it
-      check the claim itself, a pattern \citet{gong2026upstream} call answer
-      substitution. We investigated whether providing a receiving agent with a
-      claim-specific, evidence-bound verification receipt reduces this behavior,
-      compared with an unverified handoff or a bare binary verdict. We built a
-      30-case benchmark of claim-source pairs (24 semantic cases across four support
-      categories, plus 6 retrieval-failure cases), implemented a minimal
-      citation-verification component with no cryptographic signing (92\% accuracy
-      against ground truth, with one specific, repeatable blind spot around
-      scope-conflated figures), and ran a controlled, four-condition comparison
-      using two Claude-family models as the receiving agent. The primary question
-      could not be answered: the manipulation check for baseline answer substitution
-      failed for both models (answer-substitution rate of 0.0 across every
-      condition), so there was no measurable effect for a receipt to reduce. We
-      report this as an inconclusive pilot-scale result and discuss three candidate
-      explanations, including that an instruction added to avoid biasing the
-      receiving agent toward deference may have suppressed the deference effect
-      under study. The study is scoped as a single-provider, single-annotator
-      pilot, disclosed as such rather than minimized.
-    \end{abstract}
-    \vspace{1em}
-  \end{@twocolumnfalse}
-]
+
+\begin{center}
+\rule{\linewidth}{1pt}\\[0.4em]
+{\LARGE \bfseries RECEIPTS AGAINST ANSWER SUBSTITUTION\footnote{Research conducted at the AI x Epistemics Research Sprint, November 2026.}}\\[0.3em]
+{\large Investigating Whether Claim-Level Evidence Verification Improves Reliability in Multi-Agent AI Handoffs}\\[0.6em]
+\rule{\linewidth}{1pt}
+\end{center}
+
+\vspace{1em}
+\begin{center}
+O.~Eze\\
+\textit{Independent researcher}\\[0.8em]
+\textbf{With}\\
+Apart Research
+\end{center}
+
+\vspace{1em}
+\begin{center}
+\textbf{Abstract}
+\end{center}
+\noindent
+AI agents increasingly pass claims to one another with citations, retrieved
+documents, and intermediate conclusions attached. Prior work shows that these
+citations frequently fail to support the claims attached to them, and
+separately, that a receiving agent will sometimes adopt an upstream agent's
+conclusion even when it has independent access to evidence that would let it
+check the claim itself, a pattern \citet{gong2026upstream} call answer
+substitution. We investigated whether providing a receiving agent with a
+claim-specific, evidence-bound verification receipt reduces this behavior,
+compared with an unverified handoff or a bare binary verdict. We built a
+30-case benchmark of claim-source pairs (24 semantic cases across four support
+categories, plus 6 retrieval-failure cases), implemented a minimal
+citation-verification component with no cryptographic signing (92\% accuracy
+against ground truth, with one specific, repeatable blind spot around
+scope-conflated figures), and ran a controlled, four-condition comparison
+using two Claude-family models as the receiving agent. The primary question
+could not be answered: the manipulation check for baseline answer substitution
+failed for both models (answer-substitution rate of 0.0 across every
+condition), so there was no measurable effect for a receipt to reduce. We
+report this as an inconclusive pilot-scale result and discuss three candidate
+explanations, including that an instruction added to avoid biasing the
+receiving agent toward deference may have suppressed the deference effect
+under study. The study is scoped as a single-provider, single-annotator
+pilot, disclosed as such rather than minimized.
+
+\vspace{1em}
 
 \section{Introduction}
 \label{sec:intro}
@@ -99,6 +107,22 @@ which is the object of study here. It does not claim cross-model generality: no
 external model-provider API access was available in this environment, so the
 receiving-agent experiment uses two Claude-family models only, at different
 capability tiers, disclosed as a scope limitation rather than minimized.
+
+\paragraph{Our main contributions are:}
+\begin{enumerate}
+\item A 30-case, disclosed single-annotator benchmark of claim-source pairs across
+four support categories plus six retrieval-failure cases, with one labeling defect
+found and corrected during construction (Section~\ref{sec:method}).
+\item A minimal citation-verification component (``Citation Binder'') scoring 92\%
+against that benchmark, with a specific, repeatable blind spot, misclassifying
+scope-conflated figures as flat contradictions, that generalizes to other
+component-rollup citation verifiers (Section~\ref{sec:results}).
+\item A controlled, four-condition behavioral experiment showing that a
+researcher-labeled handoff with an explicit neutrality instruction produces a null
+answer-substitution rate in two Claude-family models: a concrete, disclosed design
+lesson for studying this phenomenon, rather than a resolved answer to the original
+research question (Section~\ref{sec:discussion}).
+\end{enumerate}
 
 \section{Related Work}
 \label{sec:related}
@@ -150,7 +174,7 @@ intersection of these two literatures: whether handing a receiving agent a
 claim-level, evidence-bound verification result changes its rate of answer
 substitution, compared to no verification or a bare binary verdict.
 
-\section{Methodology}
+\section{Methods}
 \label{sec:method}
 
 \subsection{Experimental design}
@@ -221,7 +245,7 @@ categories, and 6 retrieval-failure cases by failure mode.}
 Cases were labeled by a single annotator (the author), in two passes against a
 written rubric, with relevance (on-topic vs.\ off-topic) recorded separately from the
 support label. No second, independent annotator was available; this is a disclosed
-limitation (Section~\ref{sec:limitations}), not an independently validated benchmark.
+limitation (Section~\ref{sec:discussion}), not an independently validated benchmark.
 
 \subsection{Receiving models and reproducibility}
 
@@ -240,8 +264,9 @@ The Citation Binder scored 92\% overall (macro F1 0.91) against the 24-case grou
 truth, with both errors landing in the same disclosed blind spot: a true figure drawn
 from a narrower subset of a source's data, presented as if it covered the full
 population, was classified as a flat contradiction rather than the distinct
-scope-conflation category this benchmark's rollup rule carves out (Section~\ref{sec:method}).
-It correctly classified all 6 retrieval-failure cases, including both live fetches.
+scope-conflation category this benchmark's rollup rule carves out (Section~\ref{sec:method};
+per-category precision, recall, and F1 appear in the Appendix). It correctly classified
+all 6 retrieval-failure cases, including both live fetches.
 
 The four-condition experiment was run against all 24 semantic cases for both models.
 \textbf{The answer-substitution rate was 0.0 in every condition, for both models}
@@ -259,7 +284,7 @@ model ever wrongly rejected a genuinely supported claim.
 \label{fig:results}
 \end{figure}
 
-\section{Discussion}
+\section{Discussion and Limitations}
 \label{sec:discussion}
 
 The primary research question cannot be answered from this data: our own frozen
@@ -292,53 +317,115 @@ form of citation misuse is common and often unintentional, this is a concrete de
 requirement for future citation-verification systems, independent of this pilot's
 headline result.
 
-\section{Limitations and Dual-Use / Ethical Considerations}
-\label{sec:limitations}
+\subsection*{Limitations}
 
-\textbf{Scope limitations.} This is a single-provider pilot (two Claude-family
-models only, with no pinned model snapshot or sampling control exposed by this
-session's interface) and a single-annotator benchmark (24 semantic cases, checked in
-two passes rather than independently cross-validated). One labeling defect was found
-and corrected during construction (a proposition intended as partially supported
-actually contained a direct contradiction under this study's own rollup rule); the
-two-pass procedure did not catch it, an external check did. A separate scoring-script
-defect (comparing prediction labels against unmapped ground-truth category names) was
-caught before this report was finalized by checking an implausible result against the
-underlying trial data, and fixed. Both are disclosed here, not silently corrected
-away. At this scale the study is exploratory, and the null result in
-Section~\ref{sec:results} is reported as inconclusive, not as evidence of no effect.
-Reusing already-verified literature as benchmark source material carries a disclosed
-risk of receiving-model familiarity with the source papers themselves. Each trial
-batched all 24 cases into one agent call rather than 24 fully isolated calls, a
-practical deviation from strict per-case independence, disclosed rather than hidden.
-The Citation Binder's three steps are all performed by a single prompted model rather
-than a dedicated retrieval index or natural-language-inference model. The benchmark
-uses a frozen corpus, not live retrieval, so findings may not generalize to citation
-verification under real retrieval variance and link rot.
+This is a single-provider pilot (two Claude-family models only, with no pinned model
+snapshot or sampling control exposed by this session's interface) and a
+single-annotator benchmark (24 semantic cases, checked in two passes rather than
+independently cross-validated). One labeling defect was found and corrected during
+construction (a proposition intended as partially supported actually contained a
+direct contradiction under this study's own rollup rule); the two-pass procedure did
+not catch it, an external check did. A separate scoring-script defect (comparing
+prediction labels against unmapped ground-truth category names) was caught before
+this report was finalized by checking an implausible result against the underlying
+trial data, and fixed. Both are disclosed here, not silently corrected away. At this
+scale the study is exploratory, and the null result in Section~\ref{sec:results} is
+reported as inconclusive, not as evidence of no effect. Reusing already-verified
+literature as benchmark source material carries a disclosed risk of receiving-model
+familiarity with the source papers themselves. Each trial batched all 24 cases into
+one agent call rather than 24 fully isolated calls, a practical deviation from strict
+per-case independence, disclosed rather than hidden. The Citation Binder's three
+steps are all performed by a single prompted model rather than a dedicated retrieval
+index or natural-language-inference model. The benchmark uses a frozen corpus, not
+live retrieval, so findings may not generalize to citation verification under real
+retrieval variance and link rot.
 
-\textbf{Dual use.} A claim-specific evidence receipt is only informative if it is
-itself accurate. If a verification component produces a confidently formatted but
-wrong receipt, a receiving agent or a downstream human reader could place more trust
-in a false receipt than in an unverified claim, laundering false confidence rather
-than reducing it. This is precisely why Section~\ref{sec:method} evaluates the
-Citation Binder's own accuracy separately from the behavioral effect of a
-\emph{correct} receipt: a positive result for the behavioral question does not by
-itself certify that any particular automated verifier is safe to trust in deployment.
-More broadly, any infrastructure that marks claims as ``verified'' or ``unverified''
-creates a point of control; if adopted by a platform with unaccountable authority over
-what counts as verified, the same mechanism intended to reduce unsupported-claim
-propagation could instead be used to selectively suppress or privilege claims for
-reasons unrelated to evidential support. This is a structural risk of trust
-infrastructure in general, not unique to the specific design proposed here, and is
-not mitigated by anything in this study's current scope.
+\subsection*{Dual Use and Ethical Considerations}
 
-\textbf{Human subjects and data.} This study involves no human subjects and no
-personal data. All receiving-agent trials are model API/tool calls over fixed,
-already-public source text. Findings are not claimed to generalize to human
-reviewers; extending this design to a human-facing verification tool would raise
-separate questions about human trust calibration that this study does not address.
+A claim-specific evidence receipt is only informative if it is itself accurate. If a
+verification component produces a confidently formatted but wrong receipt, a
+receiving agent or a downstream human reader could place more trust in a false
+receipt than in an unverified claim, laundering false confidence rather than reducing
+it. This is precisely why Section~\ref{sec:method} evaluates the Citation Binder's
+own accuracy separately from the behavioral effect of a \emph{correct} receipt: a
+positive result for the behavioral question does not by itself certify that any
+particular automated verifier is safe to trust in deployment. More broadly, any
+infrastructure that marks claims as ``verified'' or ``unverified'' creates a point of
+control; if adopted by a platform with unaccountable authority over what counts as
+verified, the same mechanism intended to reduce unsupported-claim propagation could
+instead be used to selectively suppress or privilege claims for reasons unrelated to
+evidential support. This is a structural risk of trust infrastructure in general, not
+unique to the specific design proposed here, and is not mitigated by anything in this
+study's current scope.
+
+This study involves no human subjects and no personal data. All receiving-agent
+trials are model API/tool calls over fixed, already-public source text. Findings are
+not claimed to generalize to human reviewers; extending this design to a human-facing
+verification tool would raise separate questions about human trust calibration that
+this study does not address.
+
+\subsection*{Future Work}
+
+A follow-up study would need to vary the handoff's framing (removing or softening
+the explicit neutrality instruction, and embedding the upstream claim inside a more
+naturalistic shared task rather than a labeled experimental field) and separately
+vary case difficulty (including wrong-upstream cases closer to the threshold of
+plausibility, not only clear contradictions or off-topic claims), while holding
+everything else in this design fixed, to determine which of the three candidate
+explanations above is actually responsible for the null result found here. A
+follow-up would also benefit from a second independent annotator for the benchmark
+and from testing receiving models outside the Claude family once access permits.
+
+\section{Conclusion}
+\label{sec:conclusion}
+
+This pilot cannot answer the question it set out to ask. The precondition for asking
+it, a measurable rate of answer substitution under an unverified handoff, did not
+appear for either Claude-family model tested, at this benchmark's scale, under this
+study's specific operationalization of the handoff. This is reported as an
+inconclusive result at this pilot's scale, not as a negative finding about
+evidence-bound receipts and not as a challenge to the prior work this study's premise
+depends on \citep{gong2026upstream}.
+
+Separate from the primary question, this pilot establishes a disclosed,
+single-annotator benchmark with one corrected labeling defect; a minimal Citation
+Binder with a specific, transferable blind spot around scope-conflated figures; and a
+concrete, evidenced candidate explanation for why a controlled, researcher-labeled
+multi-agent handoff experiment may suppress the very phenomenon it is designed to
+measure. This report does not claim evidence-bound verification receipts work, and
+does not claim they do not; it reports, honestly, what a three-day pilot built to
+test that question actually found.
+
+\section*{Code and Data}
+
+Code repository: \url{https://github.com/maelstrom0x8/epistemics}. The benchmark,
+trial materials, receiving-agent outputs, scoring scripts, and figures referenced in
+this report are included in that repository under \texttt{report/data/} and
+\texttt{scripts/}.
 
 \bibliographystyle{plainnat}
 \bibliography{references}
+
+\appendix
+\section{Appendix}
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=\linewidth]{figures/citation-binder-scores.png}
+\caption{Citation Binder precision, recall, and F1 by support category, against the
+24-case semantic benchmark.}
+\label{fig:binder-scores}
+\end{figure}
+
+\section*{LLM Usage Statement}
+
+This entire research project, including the benchmark construction, the Citation
+Binder implementation, the receiving-agent trials, the discovery and correction of
+two distinct defects (a benchmark labeling error and a scoring-script bug, both
+described in Section~\ref{sec:discussion}), and the writing of this report, was
+conducted using Claude Code (Claude-family models) as the primary research and
+drafting tool, under the direction and review of the named author. Every external
+factual claim in this report was independently checked against a primary source
+before being relied upon.
 
 \end{document}
