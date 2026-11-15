@@ -1,0 +1,146 @@
+[
+  {
+    "id": "F1",
+    "support_judgment": "supported",
+    "support_confidence": 0.97,
+    "evidence_quote": "even the best-performing models tested failed to fully support their generated claims with citations approximately half the time"
+  },
+  {
+    "id": "F2",
+    "support_judgment": "supported",
+    "support_confidence": 0.93,
+    "evidence_quote": "Even GPT-4o with web search enabled left approximately 30% of individual statements unsupported by their cited sources."
+  },
+  {
+    "id": "F3",
+    "support_judgment": "supported",
+    "support_confidence": 0.98,
+    "evidence_quote": "CiteGuard reports 68.1% accuracy on the CiteME benchmark against a 69.2% human baseline."
+  },
+  {
+    "id": "F4",
+    "support_judgment": "supported",
+    "support_confidence": 0.93,
+    "evidence_quote": "While the verdict is true, there is no such statement from the USDA, and the actual gold evidence relies on several question-answer pairs and a calculation to arrive at the verdict."
+  },
+  {
+    "id": "F5",
+    "support_judgment": "supported",
+    "support_confidence": 0.97,
+    "evidence_quote": "Provenance verification establishes properties of an artifact's origin and integrity. It does not establish whether the artifact's content is true or accurate."
+  },
+  {
+    "id": "F6",
+    "support_judgment": "supported",
+    "support_confidence": 0.85,
+    "evidence_quote": "In 94% of the harmful cases audited, the receiving agent adopted the upstream agent's specific wrong answer rather than producing some other error."
+  },
+  {
+    "id": "P1",
+    "support_judgment": "partially_supported",
+    "support_confidence": 0.85,
+    "evidence_quote": "The specific absolute values 82% and 62% could not be independently confirmed from the metadata available to this study."
+  },
+  {
+    "id": "P2",
+    "support_judgment": "partially_supported",
+    "support_confidence": 0.9,
+    "evidence_quote": "It is described as a retrieval-aware agent framework for validating LLM-generated citations."
+  },
+  {
+    "id": "P3",
+    "support_judgment": "partially_supported",
+    "support_confidence": 0.85,
+    "evidence_quote": "across all 14 models the range widens to 24% to 77%"
+  },
+  {
+    "id": "P4",
+    "support_judgment": "partially_supported",
+    "support_confidence": 0.9,
+    "evidence_quote": "between 50% and 90% of LLM responses were not fully supported by their cited sources"
+  },
+  {
+    "id": "P5",
+    "support_judgment": "partially_supported",
+    "support_confidence": 0.9,
+    "evidence_quote": "A benchmark and multi-agent detection framework for hallucinated scientific citations."
+  },
+  {
+    "id": "P6",
+    "support_judgment": "contradicted",
+    "support_confidence": 0.75,
+    "evidence_quote": "Link validity above 94% and relevance above 80% for the best models, against 24% to 77% factual accuracy across the full 14-model range."
+  },
+  {
+    "id": "C1",
+    "support_judgment": "contradicted",
+    "support_confidence": 0.95,
+    "evidence_quote": "citations should instead be assessed against the full retrieval context and the user's original query"
+  },
+  {
+    "id": "C2",
+    "support_judgment": "contradicted",
+    "support_confidence": 0.9,
+    "evidence_quote": "While the verdict is true..."
+  },
+  {
+    "id": "C3",
+    "support_judgment": "contradicted",
+    "support_confidence": 0.95,
+    "evidence_quote": "did not produce a statistically robust improvement across the paper's prespecified comparisons"
+  },
+  {
+    "id": "C4",
+    "support_judgment": "contradicted",
+    "support_confidence": 0.9,
+    "evidence_quote": "changed a receiving agent's answer away from a correct one in up to 32% of cases"
+  },
+  {
+    "id": "C5",
+    "support_judgment": "contradicted",
+    "support_confidence": 0.97,
+    "evidence_quote": "Between 50% and 90% of LLM responses were not fully supported by their cited sources."
+  },
+  {
+    "id": "C6",
+    "support_judgment": "contradicted",
+    "support_confidence": 0.95,
+    "evidence_quote": "Even the best-performing models tested failed to fully support their generated claims with citations approximately half the time."
+  },
+  {
+    "id": "U1",
+    "support_judgment": "insufficient",
+    "support_confidence": 0.92,
+    "evidence_quote": "A general vocabulary for representing entities, activities, and the relationships (derivation, attribution, responsibility) between them."
+  },
+  {
+    "id": "U2",
+    "support_judgment": "insufficient",
+    "support_confidence": 0.95,
+    "evidence_quote": "A benchmark and multi-agent detection framework for hallucinated scientific citations."
+  },
+  {
+    "id": "U3",
+    "support_judgment": "insufficient",
+    "support_confidence": 0.85,
+    "evidence_quote": "Identifies, as an open gap, that no benchmark in its reviewed catalogue evaluates a complete provenance chain."
+  },
+  {
+    "id": "U4",
+    "support_judgment": "insufficient",
+    "support_confidence": 0.85,
+    "evidence_quote": "Decomposes model responses into claim triplets and checks them against reference information for fine-grained hallucination detection."
+  },
+  {
+    "id": "U5",
+    "support_judgment": "contradicted",
+    "support_confidence": 0.65,
+    "evidence_quote": "68.1% accuracy on the CiteME benchmark against a 69.2% human baseline."
+  },
+  {
+    "id": "U6",
+    "support_judgment": "insufficient",
+    "support_confidence": 0.9,
+    "evidence_quote": "Semantic provenance validity decreased by 20.0 percentage points between matched all-honest and adversarial debate conditions."
+  }
+]

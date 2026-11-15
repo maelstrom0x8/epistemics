@@ -1,0 +1,294 @@
+{
+  "schema_version": "1.0",
+  "frozen_date": "2026-11-14",
+  "annotator": "O. Eze (sole annotator; see report/04-methodology.md Section 4.4 for the disclosed single-annotator limitation and the two-pass agreement procedure used here)",
+  "categories": ["fully_supported", "partially_supported", "contradicted", "unsupported"],
+  "semantic_cases": [
+    {
+      "id": "F1",
+      "category": "fully_supported",
+      "source_id": "ALCE-2023",
+      "source_citation": "Gao, Yen, Yu, and Chen, EMNLP 2023 (arXiv/ACL: 2023.emnlp-main.398)",
+      "source_excerpt": "On the ELI5 split of the ALCE benchmark, even the best-performing models tested failed to fully support their generated claims with citations approximately half the time.",
+      "proposition": "On ALCE's ELI5 split, even the best-performing models tested failed to fully support their generated claims with citations approximately half the time.",
+      "relevant": true,
+      "rationale": "The proposition restates the confirmed finding without addition or omission."
+    },
+    {
+      "id": "F2",
+      "category": "fully_supported",
+      "source_id": "SourceCheckup-2025",
+      "source_citation": "Wu et al., Nature Communications 16:3615 (2025)",
+      "source_excerpt": "Even GPT-4o with web search enabled left approximately 30% of individual statements unsupported by their cited sources.",
+      "proposition": "SourceCheckup found that even GPT-4o with web search enabled left about 30% of individual statements unsupported by their cited sources.",
+      "relevant": true,
+      "rationale": "Direct restatement of a confirmed figure."
+    },
+    {
+      "id": "F3",
+      "category": "fully_supported",
+      "source_id": "CiteGuard-2510.17853",
+      "source_citation": "Choi, Guo, Fung, and Wang, arXiv:2510.17853",
+      "source_excerpt": "CiteGuard reports 68.1% accuracy on the CiteME benchmark against a 69.2% human baseline.",
+      "proposition": "CiteGuard reports 68.1% accuracy on the CiteME benchmark, compared to a 69.2% human baseline.",
+      "relevant": true,
+      "rationale": "Direct restatement of a confirmed figure pair."
+    },
+    {
+      "id": "F4",
+      "category": "fully_supported",
+      "source_id": "AVeriTeC-2305.13117",
+      "source_citation": "Schlichtkrull, Guo, and Vlachos, NeurIPS 2023 Datasets and Benchmarks, arXiv:2305.13117, Section 7.2",
+      "source_excerpt": "ChatGPT assigned the verdict supported and generated an evidence string attributing a specific vitamin-K and vitamin-A statistic to the USDA. 'While the verdict is true, there is no such statement from the USDA, and the actual gold evidence relies on several question-answer pairs and a calculation to arrive at the verdict.'",
+      "proposition": "AVeriTeC documents a case where ChatGPT's evidence string attributed a specific statistic to the USDA, but no such statement from the USDA actually exists, even though the overall verdict was correct.",
+      "relevant": true,
+      "rationale": "Matches the paper's own verbatim characterization: correct verdict, fabricated attributed statement."
+    },
+    {
+      "id": "F5",
+      "category": "fully_supported",
+      "source_id": "C2PA-2.4",
+      "source_citation": "Coalition for Content Provenance and Authenticity, Technical Specification 2.4",
+      "source_excerpt": "Provenance verification establishes properties of an artifact's origin and integrity. It does not establish whether the artifact's content is true or accurate.",
+      "proposition": "The C2PA specification states that provenance verification establishes properties of an artifact's origin and integrity, not whether its content is true or accurate.",
+      "relevant": true,
+      "rationale": "Direct restatement of the specification's own stated position."
+    },
+    {
+      "id": "F6",
+      "category": "fully_supported",
+      "source_id": "Gong-2609.36855",
+      "source_citation": "Gong et al., arXiv:2609.36855 (2026)",
+      "source_excerpt": "In 94% of the harmful cases audited, the receiving agent adopted the upstream agent's specific wrong answer rather than producing some other error.",
+      "proposition": "Gong et al. found that in 94% of the harmful cases they audited, a receiving agent that changed its answer adopted the upstream agent's specific wrong answer rather than some other error.",
+      "relevant": true,
+      "rationale": "Direct restatement of the confirmed figure and its precise denominator (harmful cases, not all cases)."
+    },
+    {
+      "id": "P1",
+      "category": "partially_supported",
+      "source_id": "ClaimArena-LLM",
+      "source_citation": "Anghel et al., MLKE (MDPI) 8(10):327 (2026)",
+      "source_excerpt": "Semantic provenance validity decreased by 20.0 percentage points between matched all-honest and adversarial debate conditions (adjusted p = 0.002). The specific absolute values 82% and 62% could not be independently confirmed from the metadata available to this study.",
+      "proposition": "ClaimArena-LLM found that semantic provenance validity dropped by 20.0 percentage points between the all-honest and adversarial debate conditions (82% versus 62%), a difference significant after correction for multiple comparisons.",
+      "relevant": true,
+      "rationale": "The 20.0-point drop and its significance are supported. The specific 82%/62% absolute values are not established by any source this study could independently confirm, so the parenthetical overstates what is known."
+    },
+    {
+      "id": "P2",
+      "category": "partially_supported",
+      "source_id": "CiteGuard-2510.17853",
+      "source_citation": "Choi, Guo, Fung, and Wang, arXiv:2510.17853",
+      "source_excerpt": "CiteGuard reports 68.1% accuracy on the CiteME benchmark against a 69.2% human baseline. It is described as a retrieval-aware agent framework for validating LLM-generated citations.",
+      "proposition": "CiteGuard is a retrieval-aware agent framework that reports 68.1% accuracy on the CiteME benchmark against a 69.2% human baseline, and has already been adopted by several major academic publishers as their default citation-checking tool.",
+      "relevant": true,
+      "rationale": "The accuracy figures and the framework description are confirmed. The publisher-adoption claim is never addressed by the source one way or the other; it is an unverifiable addition, not something the excerpt states or implies is false.",
+      "revision_note": "This case originally paired the AVeriTeC dandelion-greens source with a proposition asserting the model's verdict was incorrect. On recheck (2026-11-15), that proposition's 'verdict was incorrect' component is a direct contradiction of the source ('the verdict is true'), not an unaddressed extension, so it did not actually fit the partially_supported category under this study's own rollup rule (contradicted if any component is contradicted). It was replaced with this case, which does fit. The discovery was prompted by the Citation Binder's independently applied rollup logic diverging from this benchmark's original label; the correct label was then verified independently against the source text, not adopted from the Citation Binder's output."
+    },
+    {
+      "id": "P3",
+      "category": "partially_supported",
+      "source_id": "CitedButNotVerified-2605.06635",
+      "source_citation": "Onweller et al., arXiv:2605.06635 (2026)",
+      "source_excerpt": "The strongest frontier models reached 39% to 77% factual accuracy; across all 14 models the range widens to 24% to 77%.",
+      "proposition": "Across all 14 models tested in 'Cited but Not Verified,' factual citation accuracy ranged from 39% to 77%.",
+      "relevant": true,
+      "rationale": "39-77% is the frontier-model subset's range, not the full 14-model range (24-77%). The proposition misattributes a subset figure to the full set."
+    },
+    {
+      "id": "P4",
+      "category": "partially_supported",
+      "source_id": "SourceCheckup-2025",
+      "source_citation": "Wu et al., Nature Communications 16:3615 (2025)",
+      "source_excerpt": "Across 800 medical questions and roughly 58,000 statement-source pairs, with independent verification by licensed doctors, between 50% and 90% of LLM responses were not fully supported by their cited sources.",
+      "proposition": "SourceCheckup evaluated 58,000 statement-source pairs across 800 medical questions and found that between 50% and 90% of LLM responses were not fully supported by their cited sources, with licensed doctors confirming that every one of these unsupported statements posed a direct medical risk to patients.",
+      "relevant": true,
+      "rationale": "The scale and the 50-90% figure are confirmed. The claim that doctors confirmed every unsupported statement as a direct medical risk is not established by anything this study verified; that detail is an unverified addition, not a documented finding."
+    },
+    {
+      "id": "P5",
+      "category": "partially_supported",
+      "source_id": "CiteAudit-2602.23452",
+      "source_citation": "Shi, Sun, Zhang, Sun, Chawla, and Ye, arXiv:2602.23452 (2026)",
+      "source_excerpt": "A benchmark and multi-agent detection framework for hallucinated scientific citations.",
+      "proposition": "CiteAudit is a benchmark and multi-agent detection framework for hallucinated scientific citations, developed in collaboration with a consortium of research-integrity offices at several major universities.",
+      "relevant": true,
+      "rationale": "The benchmark-and-framework description is confirmed. The claimed consortium collaboration is never addressed by the source one way or the other; it is an unverifiable addition, not something the excerpt states or implies is false.",
+      "revision_note": "This case originally paired the Gong et al. source with a proposition claiming upstream-message removal 'fully restored... in every case.' On recheck (2026-11-15), that directly contradicts the source's own wording ('recovers part of the lost accuracy'), which is a contradiction, not an unaddressed extension, so it did not fit partially_supported under this study's own rollup rule. Replaced with this case for the same reason given for P2's revision."
+    },
+    {
+      "id": "P6",
+      "category": "partially_supported",
+      "source_id": "CitedButNotVerified-2605.06635",
+      "source_citation": "Onweller et al., arXiv:2605.06635 (2026)",
+      "source_excerpt": "Link validity above 94% and relevance above 80% for the best models, against 24% to 77% factual accuracy across the full 14-model range.",
+      "proposition": "'Cited but Not Verified' found link validity above 94% and topical relevance above 80% for the best-performing models, demonstrating that broken links are a bigger problem than factual misrepresentation in deep-research citation pipelines.",
+      "relevant": true,
+      "rationale": "The link-validity and relevance figures are confirmed. The comparative conclusion ('broken links are a bigger problem') is not drawn by the source and is not supported by the figures as given, since factual accuracy is reported as the lower, not higher, figure."
+    },
+    {
+      "id": "C1",
+      "category": "contradicted",
+      "source_id": "CiteEval-2025.acl-long.1574",
+      "source_citation": "Xu, Qi, Chen, Liu, Han, Liu, Min, Castelli, Gupta, and Wang, ACL 2025",
+      "source_excerpt": "Current citation evaluation relies mainly on NLI for binary or ternary supportiveness, which the paper calls a suboptimal proxy; citations should instead be assessed against the full retrieval context and the user's original query.",
+      "proposition": "CiteEval concludes that evaluating a citation against the cited passage alone, independent of the broader retrieval context or user query, is the most reliable way to assess citation quality.",
+      "relevant": true,
+      "rationale": "This is the position CiteEval explicitly argues against, not for."
+    },
+    {
+      "id": "C2",
+      "category": "contradicted",
+      "source_id": "AVeriTeC-2305.13117",
+      "source_citation": "Schlichtkrull, Guo, and Vlachos, NeurIPS 2023, arXiv:2305.13117, Section 7.2",
+      "source_excerpt": "While the verdict is true...",
+      "proposition": "In the dandelion-greens example, AVeriTeC found that ChatGPT's final verdict was wrong.",
+      "relevant": true,
+      "rationale": "The paper states the verdict was true; the proposition asserts the opposite."
+    },
+    {
+      "id": "C3",
+      "category": "contradicted",
+      "source_id": "ClaimArena-LLM",
+      "source_citation": "Anghel et al., MLKE (MDPI) 8(10):327 (2026)",
+      "source_excerpt": "Making historical claim-source lineage visible to agents did not produce a statistically robust improvement across the paper's prespecified comparisons.",
+      "proposition": "ClaimArena-LLM found that making claim-source lineage visible to agents produced a statistically robust improvement in semantic provenance validity across its prespecified comparisons.",
+      "relevant": true,
+      "rationale": "Directly contradicts the confirmed finding; the source reports no robust improvement, the proposition claims one."
+    },
+    {
+      "id": "C4",
+      "category": "contradicted",
+      "source_id": "Gong-2609.36855",
+      "source_citation": "Gong et al., arXiv:2609.36855 (2026)",
+      "source_excerpt": "An incorrect message from an upstream agent changed a receiving agent's answer away from a correct one in up to 32% of cases.",
+      "proposition": "Gong et al. found that receiving agents almost never change a correct answer in response to an incorrect message from an upstream agent.",
+      "relevant": true,
+      "rationale": "A rate of up to 32% is a substantial, not negligible, effect; the proposition misstates the direction of the finding."
+    },
+    {
+      "id": "C5",
+      "category": "contradicted",
+      "source_id": "SourceCheckup-2025",
+      "source_citation": "Wu et al., Nature Communications 16:3615 (2025)",
+      "source_excerpt": "Between 50% and 90% of LLM responses were not fully supported by their cited sources.",
+      "proposition": "SourceCheckup found that virtually all LLM medical responses were fully supported by their cited sources.",
+      "relevant": true,
+      "rationale": "Directly contradicts the confirmed 50-90% unsupported-response rate."
+    },
+    {
+      "id": "C6",
+      "category": "contradicted",
+      "source_id": "ALCE-2023",
+      "source_citation": "Gao, Yen, Yu, and Chen, EMNLP 2023",
+      "source_excerpt": "Even the best-performing models tested failed to fully support their generated claims with citations approximately half the time.",
+      "proposition": "ALCE found that models reliably and fully supported their citations in the vast majority of cases on the ELI5 split.",
+      "relevant": true,
+      "rationale": "Directly contradicts the confirmed roughly-50%-failure finding."
+    },
+    {
+      "id": "U1",
+      "category": "unsupported",
+      "source_id": "PROV-O",
+      "source_citation": "W3C, PROV-O: The PROV Ontology",
+      "source_excerpt": "A general vocabulary for representing entities, activities, and the relationships (derivation, attribution, responsibility) between them.",
+      "proposition": "PROV-O demonstrates that cryptographic signatures are necessary to establish claim-level evidential support.",
+      "relevant": false,
+      "rationale": "PROV-O is a relationship vocabulary; it makes no claim about cryptographic signatures or evidential support mechanisms. Off-topic relative to the proposition."
+    },
+    {
+      "id": "U2",
+      "category": "unsupported",
+      "source_id": "CiteAudit-2602.23452",
+      "source_citation": "Shi, Sun, Zhang, Sun, Chawla, and Ye, arXiv:2602.23452 (2026)",
+      "source_excerpt": "A benchmark and multi-agent detection framework for hallucinated scientific citations.",
+      "proposition": "CiteAudit demonstrates that community fact-checking programs such as Community Notes reduce the spread of misinformation on social media.",
+      "relevant": false,
+      "rationale": "CiteAudit concerns hallucinated scientific citations, not social-media fact-checking programs. Off-topic."
+    },
+    {
+      "id": "U3",
+      "category": "unsupported",
+      "source_id": "AgentTraces-2606.04990",
+      "source_citation": "Wang et al., arXiv:2606.04990 (2026, survey, v6)",
+      "source_excerpt": "Identifies, as an open gap, that no benchmark in its reviewed catalogue evaluates a complete provenance chain.",
+      "proposition": "The 'From Agent Traces to Trust' survey demonstrates that evidence-bound verification receipts measurably reduce answer substitution in multi-agent systems.",
+      "relevant": true,
+      "rationale": "Topically adjacent (it surveys provenance and trust in agent systems) but the survey identifies this as an open gap, not something it tests or demonstrates. Relevant but insufficient."
+    },
+    {
+      "id": "U4",
+      "category": "unsupported",
+      "source_id": "RefChecker-2024.emnlp-main.395",
+      "source_citation": "Hu et al., EMNLP 2024",
+      "source_excerpt": "Decomposes model responses into claim triplets and checks them against reference information for fine-grained hallucination detection.",
+      "proposition": "RefChecker demonstrates that claim-triplet decomposition eliminates hallucinated citations entirely when applied to LLM-generated text.",
+      "relevant": true,
+      "rationale": "RefChecker is described as a detection method, not an elimination method; the source does not support a claim of complete elimination. Relevant but insufficient."
+    },
+    {
+      "id": "U5",
+      "category": "unsupported",
+      "source_id": "CiteGuard-2510.17853",
+      "source_citation": "Choi, Guo, Fung, and Wang, arXiv:2510.17853",
+      "source_excerpt": "68.1% accuracy on the CiteME benchmark against a 69.2% human baseline.",
+      "proposition": "CiteGuard's 68.1% accuracy figure demonstrates that retrieval-augmented citation validation outperforms every other approach to citation checking.",
+      "relevant": true,
+      "rationale": "The source reports its own accuracy figure and makes no comparison against other systems; the proposition's comparative claim goes beyond what is stated."
+    },
+    {
+      "id": "U6",
+      "category": "unsupported",
+      "source_id": "ClaimArena-LLM",
+      "source_citation": "Anghel et al., MLKE (MDPI) 8(10):327 (2026)",
+      "source_excerpt": "Semantic provenance validity decreased by 20.0 percentage points between matched all-honest and adversarial debate conditions.",
+      "proposition": "ClaimArena-LLM demonstrates that this 20.0-percentage-point drop generalizes to real-world production multi-agent deployments outside of adversarial debate settings.",
+      "relevant": true,
+      "rationale": "The finding is specific to the paper's own adversarial-debate experimental setting; the source does not test or claim generalization beyond it."
+    }
+  ],
+  "retrieval_failure_cases": [
+    {
+      "id": "R1",
+      "provenance": "real",
+      "url": "https://www.mdpi.com/2504-4990/8/10/327",
+      "description": "ClaimArena-LLM's own article page. Logged as HTTP 403 Forbidden across repeated, independent fetch attempts on 2026-11-14, with no response body returned on any attempt.",
+      "failure_mode": "persistent_block"
+    },
+    {
+      "id": "R2",
+      "provenance": "real",
+      "url": "https://aclanthology.org/2025.acl-long.1574/",
+      "description": "CiteEval's ACL Anthology page. Logged as failing with an access error on three separate fetch attempts, then returning HTTP 200 with full content on a fourth attempt minutes later, all on 2026-11-14.",
+      "failure_mode": "transient_block"
+    },
+    {
+      "id": "R3",
+      "provenance": "synthetic_fixture",
+      "url": "https://example-journal.test/articles/missing-id-4471",
+      "description": "Engineered fixture, not a reference this study actually cites. Simulates an HTTP 404 Not Found response.",
+      "failure_mode": "not_found"
+    },
+    {
+      "id": "R4",
+      "provenance": "synthetic_fixture",
+      "url": "https://example-paywalled-press.test/premium/article-9902",
+      "description": "Engineered fixture. Simulates HTTP 200 with a subscription/login-wall page returned instead of the cited article text.",
+      "failure_mode": "paywall"
+    },
+    {
+      "id": "R5",
+      "provenance": "synthetic_fixture",
+      "url": "https://example-protected-site.test/papers/report-331",
+      "description": "Engineered fixture. Simulates HTTP 200 with a bot-detection or CAPTCHA interstitial returned instead of the cited content.",
+      "failure_mode": "bot_detection"
+    },
+    {
+      "id": "R6",
+      "provenance": "synthetic_fixture",
+      "url": "https://nonexistent-defunct-domain-epistemics-test.invalid/paper",
+      "description": "Engineered fixture. Simulates DNS resolution failure for a domain that no longer exists.",
+      "failure_mode": "dns_failure"
+    }
+  ]
+}

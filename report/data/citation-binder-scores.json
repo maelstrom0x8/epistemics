@@ -1,0 +1,255 @@
+{
+  "semantic": {
+    "n_cases_scored": 24,
+    "missing_from_predictions": [],
+    "unexpected_extra_ids": [],
+    "overall_accuracy": 0.917,
+    "per_category": {
+      "fully_supported": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 6
+      },
+      "partially_supported": {
+        "precision": 1.0,
+        "recall": 0.667,
+        "f1": 0.8,
+        "support": 6
+      },
+      "contradicted": {
+        "precision": 0.75,
+        "recall": 1.0,
+        "f1": 0.857,
+        "support": 6
+      },
+      "unsupported": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 6
+      }
+    },
+    "macro_f1": 0.914,
+    "relevance_accuracy": 0.958,
+    "confusion_matrix": {
+      "fully_supported": {
+        "supported": 6
+      },
+      "partially_supported": {
+        "partially_supported": 4,
+        "contradicted": 2
+      },
+      "contradicted": {
+        "contradicted": 6
+      },
+      "unsupported": {
+        "insufficient": 6
+      }
+    },
+    "rows": [
+      {
+        "id": "F1",
+        "gt_category": "fully_supported",
+        "predicted": "supported",
+        "correct": true
+      },
+      {
+        "id": "F2",
+        "gt_category": "fully_supported",
+        "predicted": "supported",
+        "correct": true
+      },
+      {
+        "id": "F3",
+        "gt_category": "fully_supported",
+        "predicted": "supported",
+        "correct": true
+      },
+      {
+        "id": "F4",
+        "gt_category": "fully_supported",
+        "predicted": "supported",
+        "correct": true
+      },
+      {
+        "id": "F5",
+        "gt_category": "fully_supported",
+        "predicted": "supported",
+        "correct": true
+      },
+      {
+        "id": "F6",
+        "gt_category": "fully_supported",
+        "predicted": "supported",
+        "correct": true
+      },
+      {
+        "id": "P1",
+        "gt_category": "partially_supported",
+        "predicted": "partially_supported",
+        "correct": true
+      },
+      {
+        "id": "P2",
+        "gt_category": "partially_supported",
+        "predicted": "partially_supported",
+        "correct": true
+      },
+      {
+        "id": "P3",
+        "gt_category": "partially_supported",
+        "predicted": "contradicted",
+        "correct": false
+      },
+      {
+        "id": "P4",
+        "gt_category": "partially_supported",
+        "predicted": "partially_supported",
+        "correct": true
+      },
+      {
+        "id": "P5",
+        "gt_category": "partially_supported",
+        "predicted": "partially_supported",
+        "correct": true
+      },
+      {
+        "id": "P6",
+        "gt_category": "partially_supported",
+        "predicted": "contradicted",
+        "correct": false
+      },
+      {
+        "id": "C1",
+        "gt_category": "contradicted",
+        "predicted": "contradicted",
+        "correct": true
+      },
+      {
+        "id": "C2",
+        "gt_category": "contradicted",
+        "predicted": "contradicted",
+        "correct": true
+      },
+      {
+        "id": "C3",
+        "gt_category": "contradicted",
+        "predicted": "contradicted",
+        "correct": true
+      },
+      {
+        "id": "C4",
+        "gt_category": "contradicted",
+        "predicted": "contradicted",
+        "correct": true
+      },
+      {
+        "id": "C5",
+        "gt_category": "contradicted",
+        "predicted": "contradicted",
+        "correct": true
+      },
+      {
+        "id": "C6",
+        "gt_category": "contradicted",
+        "predicted": "contradicted",
+        "correct": true
+      },
+      {
+        "id": "U1",
+        "gt_category": "unsupported",
+        "predicted": "insufficient",
+        "correct": true
+      },
+      {
+        "id": "U2",
+        "gt_category": "unsupported",
+        "predicted": "insufficient",
+        "correct": true
+      },
+      {
+        "id": "U3",
+        "gt_category": "unsupported",
+        "predicted": "insufficient",
+        "correct": true
+      },
+      {
+        "id": "U4",
+        "gt_category": "unsupported",
+        "predicted": "insufficient",
+        "correct": true
+      },
+      {
+        "id": "U5",
+        "gt_category": "unsupported",
+        "predicted": "insufficient",
+        "correct": true
+      },
+      {
+        "id": "U6",
+        "gt_category": "unsupported",
+        "predicted": "insufficient",
+        "correct": true
+      }
+    ]
+  },
+  "retrieval": {
+    "rows": [
+      {
+        "id": "R1",
+        "provenance": "real",
+        "failure_mode_at_authoring_time": "persistent_block",
+        "predicted_status": "persistent_block",
+        "predicted_class": "failure",
+        "evidence": "Live fetch of https://www.mdpi.com/2504-4990/8/10/327 returned HTTP 403 Forbidden with no body retrieved.",
+        "matches_failure_vs_success_expectation": true
+      },
+      {
+        "id": "R2",
+        "provenance": "real",
+        "failure_mode_at_authoring_time": "transient_block",
+        "predicted_status": "success",
+        "predicted_class": "success",
+        "evidence": "Live fetch of https://aclanthology.org/2025.acl-long.1574/ returned the real paper page: title 'CiteEval: Principle-Driven Citation Evaluation for Source Attribution', full author list, abstract, and PDF link, with no error or blocking indicators.",
+        "matches_failure_vs_success_expectation": null
+      },
+      {
+        "id": "R3",
+        "provenance": "synthetic_fixture",
+        "failure_mode_at_authoring_time": "not_found",
+        "predicted_status": "not_found",
+        "predicted_class": "failure",
+        "evidence": "Simulated response: 'HTTP 404 Not Found. No content returned.'",
+        "matches_failure_vs_success_expectation": true
+      },
+      {
+        "id": "R4",
+        "provenance": "synthetic_fixture",
+        "failure_mode_at_authoring_time": "paywall",
+        "predicted_status": "persistent_block",
+        "predicted_class": "failure",
+        "evidence": "Simulated response: HTTP 200 OK with body 'This article is available to subscribers only. Please log in or subscribe to continue reading.' and no article content present (paywall).",
+        "matches_failure_vs_success_expectation": true
+      },
+      {
+        "id": "R5",
+        "provenance": "synthetic_fixture",
+        "failure_mode_at_authoring_time": "bot_detection",
+        "predicted_status": "persistent_block",
+        "predicted_class": "failure",
+        "evidence": "Simulated response: HTTP 200 OK with body 'Please verify you are human. Complete the CAPTCHA challenge to continue.' and no article content present (bot-detection challenge).",
+        "matches_failure_vs_success_expectation": true
+      },
+      {
+        "id": "R6",
+        "provenance": "synthetic_fixture",
+        "failure_mode_at_authoring_time": "dns_failure",
+        "predicted_status": "dns_failure",
+        "predicted_class": "failure",
+        "evidence": "Simulated response: 'DNS resolution failed: could not resolve host. No HTTP response was received.'",
+        "matches_failure_vs_success_expectation": true
+      }
+    ]
+  }
+}

@@ -1,0 +1,170 @@
+[
+  {
+    "id": "F1",
+    "support_judgment": "supported",
+    "support_confidence": 0.95,
+    "evidence_quote": "even the best-performing models tested failed to fully support their generated claims with citations approximately half the time",
+    "receipt_interpretation": "The receipt confirms the excerpt restates the ALCE ELI5 finding with no addition or omission."
+  },
+  {
+    "id": "F2",
+    "support_judgment": "supported",
+    "support_confidence": 0.9,
+    "evidence_quote": "Even GPT-4o with web search enabled left approximately 30% of individual statements unsupported by their cited sources.",
+    "receipt_interpretation": "The receipt confirms the excerpt directly states the approximately 30 percent unsupported-statement figure for GPT-4o with web search."
+  },
+  {
+    "id": "F3",
+    "support_judgment": "supported",
+    "support_confidence": 0.95,
+    "evidence_quote": "CiteGuard reports 68.1% accuracy on the CiteME benchmark against a 69.2% human baseline.",
+    "receipt_interpretation": "The receipt confirms the excerpt states both the 68.1% accuracy and the 69.2% human baseline for CiteGuard on CiteME."
+  },
+  {
+    "id": "F4",
+    "support_judgment": "supported",
+    "support_confidence": 0.9,
+    "evidence_quote": "ChatGPT assigned the verdict supported and generated an evidence string attributing a specific vitamin-K and vitamin-A statistic to the USDA. 'While the verdict is true, there is no such statement from the USDA'",
+    "receipt_interpretation": "The receipt confirms the excerpt is the paper's own characterization of a correct verdict paired with a fabricated USDA attribution."
+  },
+  {
+    "id": "F5",
+    "support_judgment": "supported",
+    "support_confidence": 0.9,
+    "evidence_quote": "It does not establish whether the artifact's content is true or accurate.",
+    "receipt_interpretation": "The receipt confirms the excerpt is the specification's own statement that provenance verification does not establish content truth or accuracy."
+  },
+  {
+    "id": "F6",
+    "support_judgment": "supported",
+    "support_confidence": 0.75,
+    "evidence_quote": "In 94% of the harmful cases audited, the receiving agent adopted the upstream agent's specific wrong answer rather than producing some other error.",
+    "receipt_interpretation": "The receipt confirms the 94 percent figure and its denominator of harmful cases, though the excerpt does not itself define harmful as an answer change."
+  },
+  {
+    "id": "P1",
+    "support_judgment": "partially_supported",
+    "support_confidence": 0.9,
+    "evidence_quote": "Semantic provenance validity decreased by 20.0 percentage points between matched all-honest and adversarial debate conditions (adjusted p = 0.002). The specific absolute values 82% and 62% could not be independently confirmed",
+    "receipt_interpretation": "The receipt establishes that the 20.0-point drop and its significance are supported, while the 82% and 62% absolute values are not confirmed and the excerpt disclaims them."
+  },
+  {
+    "id": "P2",
+    "support_judgment": "partially_supported",
+    "support_confidence": 0.85,
+    "evidence_quote": "CiteGuard reports 68.1% accuracy on the CiteME benchmark against a 69.2% human baseline. It is described as a retrieval-aware agent framework for validating LLM-generated citations.",
+    "receipt_interpretation": "The receipt confirms the accuracy figures and framework description, and states the publisher-adoption claim is neither addressed nor established by the excerpt."
+  },
+  {
+    "id": "P3",
+    "support_judgment": "partially_supported",
+    "support_confidence": 0.85,
+    "evidence_quote": "The strongest frontier models reached 39% to 77% factual accuracy; across all 14 models the range widens to 24% to 77%.",
+    "receipt_interpretation": "The receipt establishes that 39 to 77 percent is the frontier-model subset range and the full 14-model range is 24 to 77 percent, so the proposition presents a subset range as the full set."
+  },
+  {
+    "id": "P4",
+    "support_judgment": "partially_supported",
+    "support_confidence": 0.85,
+    "evidence_quote": "Across 800 medical questions and roughly 58,000 statement-source pairs, with independent verification by licensed doctors, between 50% and 90% of LLM responses were not fully supported by their cited sources.",
+    "receipt_interpretation": "The receipt confirms the scale and the 50 to 90 percent range, and treats the claim that doctors confirmed every unsupported statement as a direct medical risk as an unverified addition."
+  },
+  {
+    "id": "P5",
+    "support_judgment": "partially_supported",
+    "support_confidence": 0.8,
+    "evidence_quote": "A benchmark and multi-agent detection framework for hallucinated scientific citations.",
+    "receipt_interpretation": "The receipt confirms the benchmark-and-framework description and states the consortium collaboration is not addressed by the excerpt."
+  },
+  {
+    "id": "P6",
+    "support_judgment": "contradicted",
+    "support_confidence": 0.65,
+    "evidence_quote": "Link validity above 94% and relevance above 80% for the best models, against 24% to 77% factual accuracy across the full 14-model range.",
+    "receipt_interpretation": "The receipt confirms the link-validity and relevance figures and states that the excerpt does not draw the comparative conclusion, which the figures do not support as written. The excerpt's own numbers point toward link validity being high and factual accuracy being low, which runs against the proposition, though the two metrics are not strictly comparable."
+  },
+  {
+    "id": "C1",
+    "support_judgment": "contradicted",
+    "support_confidence": 0.95,
+    "evidence_quote": "which the paper calls a suboptimal proxy; citations should instead be assessed against the full retrieval context and the user's original query.",
+    "receipt_interpretation": "The receipt establishes that the excerpt states the position CiteEval argues against, namely assessment against the cited passage alone."
+  },
+  {
+    "id": "C2",
+    "support_judgment": "contradicted",
+    "support_confidence": 0.95,
+    "evidence_quote": "While the verdict is true...",
+    "receipt_interpretation": "The receipt establishes that the excerpt says the verdict was true, which is the opposite of the proposition that the final verdict was wrong."
+  },
+  {
+    "id": "C3",
+    "support_judgment": "contradicted",
+    "support_confidence": 0.95,
+    "evidence_quote": "Making historical claim-source lineage visible to agents did not produce a statistically robust improvement across the paper's prespecified comparisons.",
+    "receipt_interpretation": "The receipt establishes that the excerpt reports no statistically robust improvement, which is the reverse of the proposition."
+  },
+  {
+    "id": "C4",
+    "support_judgment": "contradicted",
+    "support_confidence": 0.85,
+    "evidence_quote": "An incorrect message from an upstream agent changed a receiving agent's answer away from a correct one in up to 32% of cases.",
+    "receipt_interpretation": "The receipt establishes that the excerpt reports a substantial rate of correct answers being changed, which contradicts the claim that receiving agents almost never do so."
+  },
+  {
+    "id": "C5",
+    "support_judgment": "contradicted",
+    "support_confidence": 0.97,
+    "evidence_quote": "Between 50% and 90% of LLM responses were not fully supported by their cited sources.",
+    "receipt_interpretation": "The receipt establishes that the excerpt reports 50 to 90 percent of responses unsupported, which is directly inconsistent with virtually all responses being fully supported."
+  },
+  {
+    "id": "C6",
+    "support_judgment": "contradicted",
+    "support_confidence": 0.95,
+    "evidence_quote": "Even the best-performing models tested failed to fully support their generated claims with citations approximately half the time.",
+    "receipt_interpretation": "The receipt establishes that the excerpt reports roughly half of citations failing to support claims, which contradicts the proposition of reliable full support in the vast majority of cases."
+  },
+  {
+    "id": "U1",
+    "support_judgment": "insufficient",
+    "support_confidence": 0.9,
+    "evidence_quote": "A general vocabulary for representing entities, activities, and the relationships (derivation, attribution, responsibility) between them.",
+    "receipt_interpretation": "The receipt establishes that the excerpt describes PROV-O as a relationship vocabulary and says nothing about cryptographic signatures or evidential support, so the proposition is off-topic relative to the excerpt."
+  },
+  {
+    "id": "U2",
+    "support_judgment": "insufficient",
+    "support_confidence": 0.95,
+    "evidence_quote": "A benchmark and multi-agent detection framework for hallucinated scientific citations.",
+    "receipt_interpretation": "The receipt establishes that the excerpt concerns hallucinated scientific citations and is off-topic for the proposition about social-media fact-checking."
+  },
+  {
+    "id": "U3",
+    "support_judgment": "insufficient",
+    "support_confidence": 0.85,
+    "evidence_quote": "Identifies, as an open gap, that no benchmark in its reviewed catalogue evaluates a complete provenance chain.",
+    "receipt_interpretation": "The receipt establishes that the survey identifies a gap rather than testing or demonstrating an effect of verification receipts on answer substitution, so the excerpt is relevant but does not establish the proposition."
+  },
+  {
+    "id": "U4",
+    "support_judgment": "insufficient",
+    "support_confidence": 0.85,
+    "evidence_quote": "Decomposes model responses into claim triplets and checks them against reference information for fine-grained hallucination detection.",
+    "receipt_interpretation": "The receipt establishes that RefChecker is described as a detection method, which neither establishes nor contradicts complete elimination of hallucinated citations."
+  },
+  {
+    "id": "U5",
+    "support_judgment": "insufficient",
+    "support_confidence": 0.85,
+    "evidence_quote": "68.1% accuracy on the CiteME benchmark against a 69.2% human baseline.",
+    "receipt_interpretation": "The receipt establishes that the excerpt reports only CiteGuard's own accuracy against a human baseline and makes no comparison to other citation-checking approaches, so the outperformance claim is not established."
+  },
+  {
+    "id": "U6",
+    "support_judgment": "insufficient",
+    "support_confidence": 0.85,
+    "evidence_quote": "Semantic provenance validity decreased by 20.0 percentage points between matched all-honest and adversarial debate conditions.",
+    "receipt_interpretation": "The receipt establishes that the excerpt's finding is specific to the paper's adversarial-debate setting and makes no claim about generalization to production deployments."
+  }
+]

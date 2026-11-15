@@ -27,9 +27,9 @@ Existing citation-verification work (ALCE, SourceCheckup, the deep-research cita
 
 That is the gap this study investigates:
 
-> Does providing a receiving AI agent with a claim-specific, evidence-bound verification receipt reduce its adoption of an upstream agent's unsupported conclusions, compared with an unverified handoff or a bare binary verdict?
+> Among cases a receiving AI agent can answer correctly on its own, without any upstream message, does providing it with a claim-specific, evidence-bound verification receipt reduce how often it instead adopts an upstream agent's specific unsupported conclusion, compared with an unverified handoff or a bare binary verdict?
 
-This single question is developed into a full set of hypotheses in Chapter 3. The remainder of this introduction states plainly what the study does not claim.
+The restriction to independently-solvable cases matters: without it, a receiving agent that is simply wrong regardless of what it is told would be indistinguishable from one that was misled by the upstream message, and only the second is the phenomenon this study investigates. Chapter 3 develops this question into a full set of hypotheses and records, as a dated revision, that this restriction was added after an initial, looser draft of the question did not include it. The remainder of this introduction states plainly what the study does not claim.
 
 ## 1.3 What this study does not claim
 

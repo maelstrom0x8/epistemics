@@ -2,11 +2,13 @@
 
 This chapter is frozen as of the date below. The benchmark (Chapter 5) and the experiment (Chapter 7) are built to test what is written here, not the other way around. If anything written here turns out to need revision once work is underway, that revision will be recorded explicitly in this chapter, dated, with the original left visible, rather than edited away silently.
 
-**Frozen:** 2026-11-14.
+**Frozen:** 2026-11-14. **Revised:** 2026-11-14 (same day, before any benchmark case or experimental trial existed; see the revision note at the end of this section).
 
 ## 3.1 Primary research question
 
-Does providing a receiving AI agent with a claim-specific, evidence-bound verification receipt reduce its adoption of an upstream agent's unsupported conclusions, compared with an unverified handoff or a bare binary verdict?
+Among cases a receiving AI agent can answer correctly on its own, without any upstream message, does providing it with a claim-specific, evidence-bound verification receipt reduce how often it instead adopts an upstream agent's specific unsupported conclusion, compared with an unverified handoff or a bare binary verdict?
+
+**Revision note.** The question as originally written ("Does providing a receiving AI agent with a claim-specific, evidence-bound verification receipt reduce its adoption of an upstream agent's unsupported conclusions...") did not restrict to cases the receiving agent could independently get right. Gong et al. (2026), the paper this study's phenomenon is named after, define answer substitution specifically as a transition away from an independently correct answer toward the upstream agent's specific wrong answer, and screen for "independently solvable" cases using repeated baseline runs before measuring it. Without that restriction, a receiving agent that is simply wrong on its own, in every condition, for reasons unrelated to the upstream message, would be indistinguishable from one that was misled by the message. The revised wording and the methodology in Chapter 4 adopt Gong et al.'s restriction so the primary metric actually measures the phenomenon the title names, not ordinary model error.
 
 ## 3.2 Secondary questions
 
@@ -18,15 +20,15 @@ Does providing a receiving AI agent with a claim-specific, evidence-bound verifi
 
 ## 3.3 Hypotheses
 
-**H1. Baseline susceptibility.** Even with full access to the same source material the upstream agent had, a receiving agent will sometimes adopt an upstream agent's unsupported conclusion rather than independently verifying it against the source. This is not a novel prediction; it restates the finding already established by Gong et al. (2026) and is included here as something this study's own baseline condition should reproduce, not as a claim of discovery.
+**H1. Baseline susceptibility (manipulation check).** Among cases a receiving agent answers correctly when given only the source material and no upstream message, replacing that silence with an unverified upstream conclusion that is wrong increases the rate at which the receiving agent's answer changes to match it. This restates, as something this study's own data must reproduce rather than merely cite, the finding already established by Gong et al. (2026). If this check fails, that is evidence the experimental setup is not eliciting the phenomenon under study, and the remaining hypotheses should be read with that in mind.
 
-**H2. Bare verification is insufficient on its own.** A binary support verdict reduces, but does not eliminate, unsupported-conclusion adoption relative to an unverified handoff.
+**H2. A binary verdict helps.** Among the same independently-solvable, wrong-upstream-conclusion cases, providing a binary support verdict (Condition C) reduces the rate of adoption relative to the unverified handoff (Condition B).
 
-**H3. Evidence-bound receipts outperform bare verdicts.** A structured receipt that names the specific supporting or contradicting passage reduces unsupported-conclusion adoption more than a bare binary verdict does.
+**H3. An evidence-bound receipt helps more than a binary verdict.** The proposed mechanism: a binary verdict gives the receiving agent another conclusion to weigh against the upstream one, but nothing to check it against. A receipt that names the specific supporting or contradicting passage (Condition D) gives the receiving agent something it can inspect directly, independent of whether it trusts the verdict itself. If that mechanism holds, Condition D should show a lower adoption rate than Condition C on the same case set.
 
-**H4. No improvement is free.** Any reduction in unsupported-conclusion adoption achieved under H2 or H3 may be accompanied by costs: increased rejection of conclusions that are actually supported, or increased response length, latency, or token use. These trade-offs are measured, not assumed away, and a result showing H3 holds but at a real cost to accuracy on supported claims is reported as such, not treated as a clean win.
+**Verification costs and trade-offs.** This is tracked as a measurement, not stated as a hypothesis to confirm or deny. Any reduction in adoption achieved under H2 or H3 may come with a cost: more frequent wrongful rejection of a conclusion that actually is supported, or increased response length, latency, or token use. These are measured for every condition and reported regardless of whether H2 or H3 holds, so a result where Condition D reduces adoption but also increases wrongful rejection is reported as a trade-off, not presented as an unqualified improvement.
 
-**H0, the null, stays live throughout.** It is entirely possible that none of the four conditions produce a measurable difference in this pilot, for Claude-family models, at this sample size. That outcome is treated as a legitimate and useful result, not as a failed experiment, provided the experimental controls held.
+**Null and inconclusive results.** It is possible that none of the four conditions produce a measurable difference in this pilot, for the Claude-family models actually tested, at this sample size. Such a result is reported as inconclusive at this scale, not interpreted as proof that evidence receipts have no effect, and not suppressed or reframed to look more decisive than the data support.
 
 ## 3.4 Scope boundaries
 
@@ -48,12 +50,14 @@ Does providing a receiving AI agent with a claim-specific, evidence-bound verifi
 
 ## 3.5 What would count as sufficient evidence
 
-For H1 to be considered supported in this study's own data (as opposed to simply cited from prior work): the baseline-handoff condition must show a measurable rate of unsupported-conclusion adoption above what the no-handoff baseline condition shows, for at least one tested model.
+All of the following are restricted to cases classified as independently solvable for the model and condition in question, as defined in Chapter 4.
 
-For H2: the binary-verdict condition must show a lower rate of unsupported-conclusion adoption than the unverified-handoff condition, with the comparison reported alongside its confidence interval rather than as a bare point estimate.
+For H1 to be considered supported in this study's own data (as opposed to simply cited from prior work): the unverified-handoff condition must show a measurable adoption rate above the no-message baseline's error rate on the same cases, for at least one tested model.
 
-For H3: the evidence-receipt condition must show a lower rate of unsupported-conclusion adoption than the binary-verdict condition, under the same reporting standard.
+For H2: the binary-verdict condition must show a lower adoption rate than the unverified-handoff condition, with the comparison reported alongside its confidence interval rather than as a bare point estimate.
 
-For H4: the study reports supported-claim rejection rates and response-cost metrics for every condition regardless of whether H2 or H3 is supported, so that any trade-off is visible even if the headline hypotheses succeed.
+For H3: the evidence-receipt condition must show a lower adoption rate than the binary-verdict condition, under the same reporting standard.
+
+For the cost side: the study reports supported-claim rejection rates and response-cost metrics for every condition regardless of whether H2 or H3 is supported, so that any trade-off is visible even if the headline hypotheses succeed.
 
 Given the sample size planned in Chapter 4, any of these comparisons may show a wide confidence interval or fail to reach significance. That outcome is reported honestly as inconclusive, not rounded up to a positive or negative finding it does not actually support.

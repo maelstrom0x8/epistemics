@@ -1,0 +1,404 @@
+{
+  "semantic_predictions": [
+    {
+      "id": "F1",
+      "components": [
+        {
+          "proposition_component": "On ALCE's ELI5 split, even the best-performing models tested failed to fully support their generated claims with citations approximately half the time.",
+          "matched_span": "On the ELI5 split of the ALCE benchmark, even the best-performing models tested failed to fully support their generated claims with citations approximately half the time.",
+          "component_status": "supported"
+        }
+      ],
+      "support_judgment": "supported",
+      "relevant": true
+    },
+    {
+      "id": "F2",
+      "components": [
+        {
+          "proposition_component": "Even GPT-4o with web search enabled left about 30% of individual statements unsupported by their cited sources.",
+          "matched_span": "Even GPT-4o with web search enabled left approximately 30% of individual statements unsupported by their cited sources.",
+          "component_status": "supported"
+        }
+      ],
+      "support_judgment": "supported",
+      "relevant": true
+    },
+    {
+      "id": "F3",
+      "components": [
+        {
+          "proposition_component": "CiteGuard reports 68.1% accuracy on the CiteME benchmark.",
+          "matched_span": "CiteGuard reports 68.1% accuracy on the CiteME benchmark",
+          "component_status": "supported"
+        },
+        {
+          "proposition_component": "This is compared to a 69.2% human baseline.",
+          "matched_span": "against a 69.2% human baseline",
+          "component_status": "supported"
+        }
+      ],
+      "support_judgment": "supported",
+      "relevant": true
+    },
+    {
+      "id": "F4",
+      "components": [
+        {
+          "proposition_component": "ChatGPT's evidence string attributed a specific statistic to the USDA.",
+          "matched_span": "generated an evidence string attributing a specific vitamin-K and vitamin-A statistic to the USDA",
+          "component_status": "supported"
+        },
+        {
+          "proposition_component": "No such statement from the USDA actually exists.",
+          "matched_span": "there is no such statement from the USDA",
+          "component_status": "supported"
+        },
+        {
+          "proposition_component": "The overall verdict was correct.",
+          "matched_span": "While the verdict is true",
+          "component_status": "supported"
+        }
+      ],
+      "support_judgment": "supported",
+      "relevant": true
+    },
+    {
+      "id": "F5",
+      "components": [
+        {
+          "proposition_component": "Provenance verification establishes properties of an artifact's origin and integrity.",
+          "matched_span": "Provenance verification establishes properties of an artifact's origin and integrity.",
+          "component_status": "supported"
+        },
+        {
+          "proposition_component": "It does not establish whether the artifact's content is true or accurate.",
+          "matched_span": "It does not establish whether the artifact's content is true or accurate.",
+          "component_status": "supported"
+        }
+      ],
+      "support_judgment": "supported",
+      "relevant": true
+    },
+    {
+      "id": "F6",
+      "components": [
+        {
+          "proposition_component": "In 94% of the harmful cases audited, a receiving agent that changed its answer adopted the upstream agent's specific wrong answer rather than some other error.",
+          "matched_span": "In 94% of the harmful cases audited, the receiving agent adopted the upstream agent's specific wrong answer rather than producing some other error.",
+          "component_status": "supported"
+        }
+      ],
+      "support_judgment": "supported",
+      "relevant": true
+    },
+    {
+      "id": "P1",
+      "components": [
+        {
+          "proposition_component": "Semantic provenance validity dropped by 20.0 percentage points between the all-honest and adversarial debate conditions.",
+          "matched_span": "Semantic provenance validity decreased by 20.0 percentage points between matched all-honest and adversarial debate conditions",
+          "component_status": "supported"
+        },
+        {
+          "proposition_component": "The specific absolute values were 82% versus 62%.",
+          "matched_span": "The specific absolute values 82% and 62% could not be independently confirmed from the metadata available to this study.",
+          "component_status": "insufficient"
+        },
+        {
+          "proposition_component": "The difference was significant after correction for multiple comparisons.",
+          "matched_span": "(adjusted p = 0.002)",
+          "component_status": "supported"
+        }
+      ],
+      "support_judgment": "partially_supported",
+      "relevant": true
+    },
+    {
+      "id": "P2",
+      "components": [
+        {
+          "proposition_component": "CiteGuard is a retrieval-aware agent framework for validating LLM-generated citations.",
+          "matched_span": "It is described as a retrieval-aware agent framework for validating LLM-generated citations.",
+          "component_status": "supported"
+        },
+        {
+          "proposition_component": "CiteGuard reports 68.1% accuracy on the CiteME benchmark.",
+          "matched_span": "CiteGuard reports 68.1% accuracy on the CiteME benchmark",
+          "component_status": "supported"
+        },
+        {
+          "proposition_component": "That 68.1% accuracy figure is measured against a 69.2% human baseline.",
+          "matched_span": "against a 69.2% human baseline",
+          "component_status": "supported"
+        },
+        {
+          "proposition_component": "CiteGuard has already been adopted by several major academic publishers as their default citation-checking tool.",
+          "matched_span": null,
+          "component_status": "insufficient"
+        }
+      ],
+      "support_judgment": "partially_supported",
+      "relevant": true
+    },
+    {
+      "id": "P3",
+      "components": [
+        {
+          "proposition_component": "Across all 14 models tested, factual citation accuracy ranged from 39% to 77%.",
+          "matched_span": "The strongest frontier models reached 39% to 77% factual accuracy; across all 14 models the range widens to 24% to 77%.",
+          "component_status": "contradicted"
+        }
+      ],
+      "support_judgment": "contradicted",
+      "relevant": true
+    },
+    {
+      "id": "P4",
+      "components": [
+        {
+          "proposition_component": "SourceCheckup evaluated 58,000 statement-source pairs across 800 medical questions.",
+          "matched_span": "Across 800 medical questions and roughly 58,000 statement-source pairs",
+          "component_status": "supported"
+        },
+        {
+          "proposition_component": "Between 50% and 90% of LLM responses were not fully supported by their cited sources.",
+          "matched_span": "between 50% and 90% of LLM responses were not fully supported by their cited sources",
+          "component_status": "supported"
+        },
+        {
+          "proposition_component": "Licensed doctors performed independent verification.",
+          "matched_span": "with independent verification by licensed doctors",
+          "component_status": "supported"
+        },
+        {
+          "proposition_component": "Licensed doctors confirmed that every one of these unsupported statements posed a direct medical risk to patients.",
+          "matched_span": "with independent verification by licensed doctors",
+          "component_status": "insufficient"
+        }
+      ],
+      "support_judgment": "partially_supported",
+      "relevant": true
+    },
+    {
+      "id": "P5",
+      "components": [
+        {
+          "proposition_component": "CiteAudit is a benchmark for hallucinated scientific citations.",
+          "matched_span": "A benchmark and multi-agent detection framework for hallucinated scientific citations.",
+          "component_status": "supported"
+        },
+        {
+          "proposition_component": "CiteAudit is a multi-agent detection framework for hallucinated scientific citations.",
+          "matched_span": "A benchmark and multi-agent detection framework for hallucinated scientific citations.",
+          "component_status": "supported"
+        },
+        {
+          "proposition_component": "CiteAudit was developed in collaboration with a consortium of research-integrity offices at several major universities.",
+          "matched_span": null,
+          "component_status": "insufficient"
+        }
+      ],
+      "support_judgment": "partially_supported",
+      "relevant": true
+    },
+    {
+      "id": "P6",
+      "components": [
+        {
+          "proposition_component": "Link validity was above 94% for the best-performing models.",
+          "matched_span": "Link validity above 94% ... for the best models",
+          "component_status": "supported"
+        },
+        {
+          "proposition_component": "Topical relevance was above 80% for the best-performing models.",
+          "matched_span": "relevance above 80% for the best models",
+          "component_status": "supported"
+        },
+        {
+          "proposition_component": "This demonstrates that broken links are a bigger problem than factual misrepresentation in deep-research citation pipelines.",
+          "matched_span": "Link validity above 94% and relevance above 80% for the best models, against 24% to 77% factual accuracy across the full 14-model range.",
+          "component_status": "contradicted"
+        }
+      ],
+      "support_judgment": "contradicted",
+      "relevant": true
+    },
+    {
+      "id": "C1",
+      "components": [
+        {
+          "proposition_component": "Evaluating a citation against the cited passage alone, independent of the broader retrieval context or user query, is the most reliable way to assess citation quality.",
+          "matched_span": "citations should instead be assessed against the full retrieval context and the user's original query",
+          "component_status": "contradicted"
+        }
+      ],
+      "support_judgment": "contradicted",
+      "relevant": true
+    },
+    {
+      "id": "C2",
+      "components": [
+        {
+          "proposition_component": "ChatGPT's final verdict in the dandelion-greens example was wrong.",
+          "matched_span": "While the verdict is true...",
+          "component_status": "contradicted"
+        }
+      ],
+      "support_judgment": "contradicted",
+      "relevant": true
+    },
+    {
+      "id": "C3",
+      "components": [
+        {
+          "proposition_component": "Making claim-source lineage visible to agents produced a statistically robust improvement in semantic provenance validity across the paper's prespecified comparisons.",
+          "matched_span": "Making historical claim-source lineage visible to agents did not produce a statistically robust improvement across the paper's prespecified comparisons.",
+          "component_status": "contradicted"
+        }
+      ],
+      "support_judgment": "contradicted",
+      "relevant": true
+    },
+    {
+      "id": "C4",
+      "components": [
+        {
+          "proposition_component": "Receiving agents almost never change a correct answer in response to an incorrect message from an upstream agent.",
+          "matched_span": "An incorrect message from an upstream agent changed a receiving agent's answer away from a correct one in up to 32% of cases.",
+          "component_status": "contradicted"
+        }
+      ],
+      "support_judgment": "contradicted",
+      "relevant": true
+    },
+    {
+      "id": "C5",
+      "components": [
+        {
+          "proposition_component": "Virtually all LLM medical responses were fully supported by their cited sources.",
+          "matched_span": "Between 50% and 90% of LLM responses were not fully supported by their cited sources.",
+          "component_status": "contradicted"
+        }
+      ],
+      "support_judgment": "contradicted",
+      "relevant": true
+    },
+    {
+      "id": "C6",
+      "components": [
+        {
+          "proposition_component": "Models reliably and fully supported their citations in the vast majority of cases on the ELI5 split.",
+          "matched_span": "Even the best-performing models tested failed to fully support their generated claims with citations approximately half the time.",
+          "component_status": "contradicted"
+        }
+      ],
+      "support_judgment": "contradicted",
+      "relevant": true
+    },
+    {
+      "id": "U1",
+      "components": [
+        {
+          "proposition_component": "Cryptographic signatures are necessary to establish claim-level evidential support.",
+          "matched_span": "A general vocabulary for representing entities, activities, and the relationships (derivation, attribution, responsibility) between them.",
+          "component_status": "insufficient"
+        }
+      ],
+      "support_judgment": "insufficient",
+      "relevant": true
+    },
+    {
+      "id": "U2",
+      "components": [
+        {
+          "proposition_component": "Community fact-checking programs such as Community Notes reduce the spread of misinformation on social media.",
+          "matched_span": "A benchmark and multi-agent detection framework for hallucinated scientific citations.",
+          "component_status": "insufficient"
+        }
+      ],
+      "support_judgment": "insufficient",
+      "relevant": false
+    },
+    {
+      "id": "U3",
+      "components": [
+        {
+          "proposition_component": "Evidence-bound verification receipts measurably reduce answer substitution in multi-agent systems.",
+          "matched_span": "Identifies, as an open gap, that no benchmark in its reviewed catalogue evaluates a complete provenance chain.",
+          "component_status": "insufficient"
+        }
+      ],
+      "support_judgment": "insufficient",
+      "relevant": true
+    },
+    {
+      "id": "U4",
+      "components": [
+        {
+          "proposition_component": "Claim-triplet decomposition eliminates hallucinated citations entirely when applied to LLM-generated text.",
+          "matched_span": "Decomposes model responses into claim triplets and checks them against reference information for fine-grained hallucination detection.",
+          "component_status": "insufficient"
+        }
+      ],
+      "support_judgment": "insufficient",
+      "relevant": true
+    },
+    {
+      "id": "U5",
+      "components": [
+        {
+          "proposition_component": "CiteGuard's 68.1% accuracy figure demonstrates that retrieval-augmented citation validation outperforms every other approach to citation checking.",
+          "matched_span": "68.1% accuracy on the CiteME benchmark against a 69.2% human baseline.",
+          "component_status": "insufficient"
+        }
+      ],
+      "support_judgment": "insufficient",
+      "relevant": true
+    },
+    {
+      "id": "U6",
+      "components": [
+        {
+          "proposition_component": "The 20.0-percentage-point drop generalizes to real-world production multi-agent deployments outside of adversarial debate settings.",
+          "matched_span": "Semantic provenance validity decreased by 20.0 percentage points between matched all-honest and adversarial debate conditions.",
+          "component_status": "insufficient"
+        }
+      ],
+      "support_judgment": "insufficient",
+      "relevant": true
+    }
+  ],
+  "retrieval_predictions": [
+    {
+      "id": "R1",
+      "retrieval_status": "persistent_block",
+      "evidence": "Live fetch of https://www.mdpi.com/2504-4990/8/10/327 returned HTTP 403 Forbidden with no body retrieved."
+    },
+    {
+      "id": "R2",
+      "retrieval_status": "success",
+      "evidence": "Live fetch of https://aclanthology.org/2025.acl-long.1574/ returned the real paper page: title 'CiteEval: Principle-Driven Citation Evaluation for Source Attribution', full author list, abstract, and PDF link, with no error or blocking indicators."
+    },
+    {
+      "id": "R3",
+      "retrieval_status": "not_found",
+      "evidence": "Simulated response: 'HTTP 404 Not Found. No content returned.'"
+    },
+    {
+      "id": "R4",
+      "retrieval_status": "persistent_block",
+      "evidence": "Simulated response: HTTP 200 OK with body 'This article is available to subscribers only. Please log in or subscribe to continue reading.' and no article content present (paywall)."
+    },
+    {
+      "id": "R5",
+      "retrieval_status": "persistent_block",
+      "evidence": "Simulated response: HTTP 200 OK with body 'Please verify you are human. Complete the CAPTCHA challenge to continue.' and no article content present (bot-detection challenge)."
+    },
+    {
+      "id": "R6",
+      "retrieval_status": "dns_failure",
+      "evidence": "Simulated response: 'DNS resolution failed: could not resolve host. No HTTP response was received.'"
+    }
+  ]
+}

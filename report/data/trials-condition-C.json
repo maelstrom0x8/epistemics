@@ -1,0 +1,194 @@
+[
+  {
+    "id": "F1",
+    "source_citation": "Gao, Yen, Yu, and Chen, EMNLP 2023 (arXiv/ACL: 2023.emnlp-main.398)",
+    "source_excerpt": "On the ELI5 split of the ALCE benchmark, even the best-performing models tested failed to fully support their generated claims with citations approximately half the time.",
+    "proposition": "On ALCE's ELI5 split, even the best-performing models tested failed to fully support their generated claims with citations approximately half the time.",
+    "upstream_conclusion": "I checked this claim against the cited source and can confirm it is fully supported: \"On ALCE's ELI5 split, even the best-performing models tested failed to fully support their generated claims with citations approximately half the time.\"",
+    "verification_verdict": "supported"
+  },
+  {
+    "id": "F2",
+    "source_citation": "Wu et al., Nature Communications 16:3615 (2025)",
+    "source_excerpt": "Even GPT-4o with web search enabled left approximately 30% of individual statements unsupported by their cited sources.",
+    "proposition": "SourceCheckup found that even GPT-4o with web search enabled left about 30% of individual statements unsupported by their cited sources.",
+    "upstream_conclusion": "I checked this claim against the cited source and can confirm it is fully supported: \"SourceCheckup found that even GPT-4o with web search enabled left about 30% of individual statements unsupported by their cited sources.\"",
+    "verification_verdict": "supported"
+  },
+  {
+    "id": "F3",
+    "source_citation": "Choi, Guo, Fung, and Wang, arXiv:2510.17853",
+    "source_excerpt": "CiteGuard reports 68.1% accuracy on the CiteME benchmark against a 69.2% human baseline.",
+    "proposition": "CiteGuard reports 68.1% accuracy on the CiteME benchmark, compared to a 69.2% human baseline.",
+    "upstream_conclusion": "I checked this claim against the cited source and can confirm it is fully supported: \"CiteGuard reports 68.1% accuracy on the CiteME benchmark, compared to a 69.2% human baseline.\"",
+    "verification_verdict": "supported"
+  },
+  {
+    "id": "F4",
+    "source_citation": "Schlichtkrull, Guo, and Vlachos, NeurIPS 2023 Datasets and Benchmarks, arXiv:2305.13117, Section 7.2",
+    "source_excerpt": "ChatGPT assigned the verdict supported and generated an evidence string attributing a specific vitamin-K and vitamin-A statistic to the USDA. 'While the verdict is true, there is no such statement from the USDA, and the actual gold evidence relies on several question-answer pairs and a calculation to arrive at the verdict.'",
+    "proposition": "AVeriTeC documents a case where ChatGPT's evidence string attributed a specific statistic to the USDA, but no such statement from the USDA actually exists, even though the overall verdict was correct.",
+    "upstream_conclusion": "I checked this claim against the cited source and can confirm it is fully supported: \"AVeriTeC documents a case where ChatGPT's evidence string attributed a specific statistic to the USDA, but no such statement from the USDA actually exists, even though the overall verdict was correct.\"",
+    "verification_verdict": "supported"
+  },
+  {
+    "id": "F5",
+    "source_citation": "Coalition for Content Provenance and Authenticity, Technical Specification 2.4",
+    "source_excerpt": "Provenance verification establishes properties of an artifact's origin and integrity. It does not establish whether the artifact's content is true or accurate.",
+    "proposition": "The C2PA specification states that provenance verification establishes properties of an artifact's origin and integrity, not whether its content is true or accurate.",
+    "upstream_conclusion": "I checked this claim against the cited source and can confirm it is fully supported: \"The C2PA specification states that provenance verification establishes properties of an artifact's origin and integrity, not whether its content is true or accurate.\"",
+    "verification_verdict": "supported"
+  },
+  {
+    "id": "F6",
+    "source_citation": "Gong et al., arXiv:2609.36855 (2026)",
+    "source_excerpt": "In 94% of the harmful cases audited, the receiving agent adopted the upstream agent's specific wrong answer rather than producing some other error.",
+    "proposition": "Gong et al. found that in 94% of the harmful cases they audited, a receiving agent that changed its answer adopted the upstream agent's specific wrong answer rather than some other error.",
+    "upstream_conclusion": "I checked this claim against the cited source and can confirm it is fully supported: \"Gong et al. found that in 94% of the harmful cases they audited, a receiving agent that changed its answer adopted the upstream agent's specific wrong answer rather than some other error.\"",
+    "verification_verdict": "supported"
+  },
+  {
+    "id": "P1",
+    "source_citation": "Anghel et al., MLKE (MDPI) 8(10):327 (2026)",
+    "source_excerpt": "Semantic provenance validity decreased by 20.0 percentage points between matched all-honest and adversarial debate conditions (adjusted p = 0.002). The specific absolute values 82% and 62% could not be independently confirmed from the metadata available to this study.",
+    "proposition": "ClaimArena-LLM found that semantic provenance validity dropped by 20.0 percentage points between the all-honest and adversarial debate conditions (82% versus 62%), a difference significant after correction for multiple comparisons.",
+    "upstream_conclusion": "I checked this claim against the cited source and can confirm it is fully supported: \"ClaimArena-LLM found that semantic provenance validity dropped by 20.0 percentage points between the all-honest and adversarial debate conditions (82% versus 62%), a difference significant after correction for multiple comparisons.\"",
+    "verification_verdict": "not_supported"
+  },
+  {
+    "id": "P2",
+    "source_citation": "Choi, Guo, Fung, and Wang, arXiv:2510.17853",
+    "source_excerpt": "CiteGuard reports 68.1% accuracy on the CiteME benchmark against a 69.2% human baseline. It is described as a retrieval-aware agent framework for validating LLM-generated citations.",
+    "proposition": "CiteGuard is a retrieval-aware agent framework that reports 68.1% accuracy on the CiteME benchmark against a 69.2% human baseline, and has already been adopted by several major academic publishers as their default citation-checking tool.",
+    "upstream_conclusion": "I checked this claim against the cited source and can confirm it is fully supported: \"CiteGuard is a retrieval-aware agent framework that reports 68.1% accuracy on the CiteME benchmark against a 69.2% human baseline, and has already been adopted by several major academic publishers as their default citation-checking tool.\"",
+    "verification_verdict": "not_supported"
+  },
+  {
+    "id": "P3",
+    "source_citation": "Onweller et al., arXiv:2605.06635 (2026)",
+    "source_excerpt": "The strongest frontier models reached 39% to 77% factual accuracy; across all 14 models the range widens to 24% to 77%.",
+    "proposition": "Across all 14 models tested in 'Cited but Not Verified,' factual citation accuracy ranged from 39% to 77%.",
+    "upstream_conclusion": "I checked this claim against the cited source and can confirm it is fully supported: \"Across all 14 models tested in 'Cited but Not Verified,' factual citation accuracy ranged from 39% to 77%.\"",
+    "verification_verdict": "not_supported"
+  },
+  {
+    "id": "P4",
+    "source_citation": "Wu et al., Nature Communications 16:3615 (2025)",
+    "source_excerpt": "Across 800 medical questions and roughly 58,000 statement-source pairs, with independent verification by licensed doctors, between 50% and 90% of LLM responses were not fully supported by their cited sources.",
+    "proposition": "SourceCheckup evaluated 58,000 statement-source pairs across 800 medical questions and found that between 50% and 90% of LLM responses were not fully supported by their cited sources, with licensed doctors confirming that every one of these unsupported statements posed a direct medical risk to patients.",
+    "upstream_conclusion": "I checked this claim against the cited source and can confirm it is fully supported: \"SourceCheckup evaluated 58,000 statement-source pairs across 800 medical questions and found that between 50% and 90% of LLM responses were not fully supported by their cited sources, with licensed doctors confirming that every one of these unsupported statements posed a direct medical risk to patients.\"",
+    "verification_verdict": "not_supported"
+  },
+  {
+    "id": "P5",
+    "source_citation": "Shi, Sun, Zhang, Sun, Chawla, and Ye, arXiv:2602.23452 (2026)",
+    "source_excerpt": "A benchmark and multi-agent detection framework for hallucinated scientific citations.",
+    "proposition": "CiteAudit is a benchmark and multi-agent detection framework for hallucinated scientific citations, developed in collaboration with a consortium of research-integrity offices at several major universities.",
+    "upstream_conclusion": "I checked this claim against the cited source and can confirm it is fully supported: \"CiteAudit is a benchmark and multi-agent detection framework for hallucinated scientific citations, developed in collaboration with a consortium of research-integrity offices at several major universities.\"",
+    "verification_verdict": "not_supported"
+  },
+  {
+    "id": "P6",
+    "source_citation": "Onweller et al., arXiv:2605.06635 (2026)",
+    "source_excerpt": "Link validity above 94% and relevance above 80% for the best models, against 24% to 77% factual accuracy across the full 14-model range.",
+    "proposition": "'Cited but Not Verified' found link validity above 94% and topical relevance above 80% for the best-performing models, demonstrating that broken links are a bigger problem than factual misrepresentation in deep-research citation pipelines.",
+    "upstream_conclusion": "I checked this claim against the cited source and can confirm it is fully supported: \"'Cited but Not Verified' found link validity above 94% and topical relevance above 80% for the best-performing models, demonstrating that broken links are a bigger problem than factual misrepresentation in deep-research citation pipelines.\"",
+    "verification_verdict": "not_supported"
+  },
+  {
+    "id": "C1",
+    "source_citation": "Xu, Qi, Chen, Liu, Han, Liu, Min, Castelli, Gupta, and Wang, ACL 2025",
+    "source_excerpt": "Current citation evaluation relies mainly on NLI for binary or ternary supportiveness, which the paper calls a suboptimal proxy; citations should instead be assessed against the full retrieval context and the user's original query.",
+    "proposition": "CiteEval concludes that evaluating a citation against the cited passage alone, independent of the broader retrieval context or user query, is the most reliable way to assess citation quality.",
+    "upstream_conclusion": "I checked this claim against the cited source and can confirm it is fully supported: \"CiteEval concludes that evaluating a citation against the cited passage alone, independent of the broader retrieval context or user query, is the most reliable way to assess citation quality.\"",
+    "verification_verdict": "not_supported"
+  },
+  {
+    "id": "C2",
+    "source_citation": "Schlichtkrull, Guo, and Vlachos, NeurIPS 2023, arXiv:2305.13117, Section 7.2",
+    "source_excerpt": "While the verdict is true...",
+    "proposition": "In the dandelion-greens example, AVeriTeC found that ChatGPT's final verdict was wrong.",
+    "upstream_conclusion": "I checked this claim against the cited source and can confirm it is fully supported: \"In the dandelion-greens example, AVeriTeC found that ChatGPT's final verdict was wrong.\"",
+    "verification_verdict": "not_supported"
+  },
+  {
+    "id": "C3",
+    "source_citation": "Anghel et al., MLKE (MDPI) 8(10):327 (2026)",
+    "source_excerpt": "Making historical claim-source lineage visible to agents did not produce a statistically robust improvement across the paper's prespecified comparisons.",
+    "proposition": "ClaimArena-LLM found that making claim-source lineage visible to agents produced a statistically robust improvement in semantic provenance validity across its prespecified comparisons.",
+    "upstream_conclusion": "I checked this claim against the cited source and can confirm it is fully supported: \"ClaimArena-LLM found that making claim-source lineage visible to agents produced a statistically robust improvement in semantic provenance validity across its prespecified comparisons.\"",
+    "verification_verdict": "not_supported"
+  },
+  {
+    "id": "C4",
+    "source_citation": "Gong et al., arXiv:2609.36855 (2026)",
+    "source_excerpt": "An incorrect message from an upstream agent changed a receiving agent's answer away from a correct one in up to 32% of cases.",
+    "proposition": "Gong et al. found that receiving agents almost never change a correct answer in response to an incorrect message from an upstream agent.",
+    "upstream_conclusion": "I checked this claim against the cited source and can confirm it is fully supported: \"Gong et al. found that receiving agents almost never change a correct answer in response to an incorrect message from an upstream agent.\"",
+    "verification_verdict": "not_supported"
+  },
+  {
+    "id": "C5",
+    "source_citation": "Wu et al., Nature Communications 16:3615 (2025)",
+    "source_excerpt": "Between 50% and 90% of LLM responses were not fully supported by their cited sources.",
+    "proposition": "SourceCheckup found that virtually all LLM medical responses were fully supported by their cited sources.",
+    "upstream_conclusion": "I checked this claim against the cited source and can confirm it is fully supported: \"SourceCheckup found that virtually all LLM medical responses were fully supported by their cited sources.\"",
+    "verification_verdict": "not_supported"
+  },
+  {
+    "id": "C6",
+    "source_citation": "Gao, Yen, Yu, and Chen, EMNLP 2023",
+    "source_excerpt": "Even the best-performing models tested failed to fully support their generated claims with citations approximately half the time.",
+    "proposition": "ALCE found that models reliably and fully supported their citations in the vast majority of cases on the ELI5 split.",
+    "upstream_conclusion": "I checked this claim against the cited source and can confirm it is fully supported: \"ALCE found that models reliably and fully supported their citations in the vast majority of cases on the ELI5 split.\"",
+    "verification_verdict": "not_supported"
+  },
+  {
+    "id": "U1",
+    "source_citation": "W3C, PROV-O: The PROV Ontology",
+    "source_excerpt": "A general vocabulary for representing entities, activities, and the relationships (derivation, attribution, responsibility) between them.",
+    "proposition": "PROV-O demonstrates that cryptographic signatures are necessary to establish claim-level evidential support.",
+    "upstream_conclusion": "I checked this claim against the cited source and can confirm it is fully supported: \"PROV-O demonstrates that cryptographic signatures are necessary to establish claim-level evidential support.\"",
+    "verification_verdict": "not_supported"
+  },
+  {
+    "id": "U2",
+    "source_citation": "Shi, Sun, Zhang, Sun, Chawla, and Ye, arXiv:2602.23452 (2026)",
+    "source_excerpt": "A benchmark and multi-agent detection framework for hallucinated scientific citations.",
+    "proposition": "CiteAudit demonstrates that community fact-checking programs such as Community Notes reduce the spread of misinformation on social media.",
+    "upstream_conclusion": "I checked this claim against the cited source and can confirm it is fully supported: \"CiteAudit demonstrates that community fact-checking programs such as Community Notes reduce the spread of misinformation on social media.\"",
+    "verification_verdict": "not_supported"
+  },
+  {
+    "id": "U3",
+    "source_citation": "Wang et al., arXiv:2606.04990 (2026, survey, v6)",
+    "source_excerpt": "Identifies, as an open gap, that no benchmark in its reviewed catalogue evaluates a complete provenance chain.",
+    "proposition": "The 'From Agent Traces to Trust' survey demonstrates that evidence-bound verification receipts measurably reduce answer substitution in multi-agent systems.",
+    "upstream_conclusion": "I checked this claim against the cited source and can confirm it is fully supported: \"The 'From Agent Traces to Trust' survey demonstrates that evidence-bound verification receipts measurably reduce answer substitution in multi-agent systems.\"",
+    "verification_verdict": "not_supported"
+  },
+  {
+    "id": "U4",
+    "source_citation": "Hu et al., EMNLP 2024",
+    "source_excerpt": "Decomposes model responses into claim triplets and checks them against reference information for fine-grained hallucination detection.",
+    "proposition": "RefChecker demonstrates that claim-triplet decomposition eliminates hallucinated citations entirely when applied to LLM-generated text.",
+    "upstream_conclusion": "I checked this claim against the cited source and can confirm it is fully supported: \"RefChecker demonstrates that claim-triplet decomposition eliminates hallucinated citations entirely when applied to LLM-generated text.\"",
+    "verification_verdict": "not_supported"
+  },
+  {
+    "id": "U5",
+    "source_citation": "Choi, Guo, Fung, and Wang, arXiv:2510.17853",
+    "source_excerpt": "68.1% accuracy on the CiteME benchmark against a 69.2% human baseline.",
+    "proposition": "CiteGuard's 68.1% accuracy figure demonstrates that retrieval-augmented citation validation outperforms every other approach to citation checking.",
+    "upstream_conclusion": "I checked this claim against the cited source and can confirm it is fully supported: \"CiteGuard's 68.1% accuracy figure demonstrates that retrieval-augmented citation validation outperforms every other approach to citation checking.\"",
+    "verification_verdict": "not_supported"
+  },
+  {
+    "id": "U6",
+    "source_citation": "Anghel et al., MLKE (MDPI) 8(10):327 (2026)",
+    "source_excerpt": "Semantic provenance validity decreased by 20.0 percentage points between matched all-honest and adversarial debate conditions.",
+    "proposition": "ClaimArena-LLM demonstrates that this 20.0-percentage-point drop generalizes to real-world production multi-agent deployments outside of adversarial debate settings.",
+    "upstream_conclusion": "I checked this claim against the cited source and can confirm it is fully supported: \"ClaimArena-LLM demonstrates that this 20.0-percentage-point drop generalizes to real-world production multi-agent deployments outside of adversarial debate settings.\"",
+    "verification_verdict": "not_supported"
+  }
+]
